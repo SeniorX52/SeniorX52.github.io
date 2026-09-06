@@ -1,0 +1,829 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mostafa Abdelaziz · Robotics &amp; Embedded Systems Engineer</title>
+<meta name="description" content="Robotics and embedded systems engineer. ROS 2, perception, GNSS/RTK sensor fusion and edge AI on Jetson and STM32. Physics-residual motion prediction, vision-guided control, field-robot localization, photogrammetry pipelines.">
+<meta property="og:title" content="Mostafa Abdelaziz · Robotics &amp; Embedded Systems Engineer">
+<meta property="og:description" content="ROS 2, perception, GNSS/RTK sensor fusion, edge AI on Jetson and STM32. Available remote.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://seniorx52.github.io/">
+<meta property="og:image" content="https://seniorx52.github.io/assets/media/me_stuttgart.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://seniorx52.github.io/">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta name="theme-color" content="#07080c">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.3.1/model-viewer.min.js"></script>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"}}</script>
+</head>
+<body>
+
+<div class="ambient"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div></div>
+<div class="grain"></div>
+<div class="spotlight"></div>
+<div class="progress" id="progress"></div>
+
+<nav id="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#top">mostafa<b>.</b>abdelaziz</a>
+    <div class="nav-links">
+      <a href="#work" class="keep">Work</a>
+      <a href="#skills">Tools</a>
+      <a href="#background">Background</a>
+      <a href="assets/Mostafa_Abdelaziz_CV.pdf" target="_blank" rel="noopener" class="keep">CV</a>
+    </div>
+    <a class="nav-cta" href="#contact">Hire me</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <canvas id="cloud" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow reveal" style="--i:0"><span class="pulse"></span> Available remote · Cairo, UTC+2 · 20–25 h/wk now, full time from mid-2027</div>
+        <h1 class="display reveal" style="--i:1">I make robots know <em>where they are</em> and <em>what's coming.</em></h1>
+        <p class="lede reveal" style="--i:2">
+          Robotics &amp; embedded systems engineer. <strong>ROS 2, computer vision and sensor fusion</strong>, deployed
+          on the hardware that actually flies and drives: Jetson, STM32, Raspberry Pi. Bachelor's thesis graded
+          <strong>1.0 (A)</strong> at the University of Stuttgart's Institute of Flight Mechanics and Controls.
+          Delivering GNSS/RTK localization, photogrammetry pipelines and vision systems <strong>as a remote contractor</strong>.
+        </p>
+        <div class="cta reveal" style="--i:3">
+          <a class="btn btn-primary" href="#work">See the work
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg></a>
+          <a class="btn" href="assets/Mostafa_Abdelaziz_CV.pdf" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 00-2 2v14a2 2 0 002 2h12a2 2 0 002-2V9z"/><path d="M14 3v6h6M9 13h6M9 17h6"/></svg>
+            View CV</a>
+          <a class="btn" href="#contact">Get in touch</a>
+        </div>
+      </div>
+      <figure class="portrait reveal" style="--i:2">
+        <img src="assets/media/me_stuttgart.jpg" alt="Mostafa Abdelaziz holding his bachelor thesis in front of the Universität Stuttgart building">
+        <figcaption class="cap"><b>Thesis hand-in · Universität Stuttgart, 2026</b>Institute of Flight Mechanics and Controls, graded 1.0 (A)</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="scroll-hint">SCROLL<span></span></div>
+</header>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>ROS 2</span><span>Nav2</span><span>NVIDIA Jetson Orin Nano</span><span>STM32 · FreeRTOS</span><span>EKF sensor fusion</span><span>GNSS / RTK</span><span>OpenCV</span><span>YOLO</span><span>PyTorch · TCN</span><span>COLMAP · OpenMVS</span><span>Gazebo · Webots · AirSim</span><span>ArduPilot SITL</span><span>PID · LQR · MPC</span><span>C++ · Python · Embedded C</span>
+    <span>ROS 2</span><span>Nav2</span><span>NVIDIA Jetson Orin Nano</span><span>STM32 · FreeRTOS</span><span>EKF sensor fusion</span><span>GNSS / RTK</span><span>OpenCV</span><span>YOLO</span><span>PyTorch · TCN</span><span>COLMAP · OpenMVS</span><span>Gazebo · Webots · AirSim</span><span>ArduPilot SITL</span><span>PID · LQR · MPC</span><span>C++ · Python · Embedded C</span>
+  </div>
+</div>
+
+<section id="highlights">
+  <div class="wrap">
+    <div class="bento">
+      <div class="card reveal span-4" style="--i:0">
+        <div class="tagline">Track record</div>
+        <div><div class="num"><span data-count="25" data-suffix="+">0</span></div>
+        <div class="lbl"><b>projects shipped</b> across robotics, perception and embedded systems, from flight controllers to photogrammetry pipelines.</div></div>
+      </div>
+      <div class="card reveal span-4" style="--i:1">
+        <div class="tagline">Egypt · Germany</div>
+        <div><div class="num"><span data-count="5">0</span></div>
+        <div class="lbl"><b>organisations worked or studied at</b>: GUC, GIU Berlin, University of Stuttgart, Valeo, Lucas-Nülle.</div></div>
+      </div>
+      <div class="card reveal span-4" style="--i:2">
+        <div class="tagline">Client reviews · Upwork</div>
+        <div><div class="num"><span data-count="12">0</span><small> × 5.0</small></div><span class="stars3d tile" role="img" aria-label="5.0 out of 5 stars"><i class="st" style="--k:0"><i class="s3"><b class="f"></b><b class="b"></b></i></i><i class="st" style="--k:1"><i class="s3"><b class="f"></b><b class="b"></b></i></i><i class="st" style="--k:2"><i class="s3"><b class="f"></b><b class="b"></b></i></i><i class="st" style="--k:3"><i class="s3"><b class="f"></b><b class="b"></b></i></i><i class="st" style="--k:4"><i class="s3"><b class="f"></b><b class="b"></b></i></i></span>
+        <div class="lbl"><b>five-star client reviews, every contract rated 5.0</b>: ROS 2, EKF fusion, embedded firmware, 3D tooling. <a href="#reviews" style="color:var(--c2)">Read them ↓</a></div></div>
+      </div>
+      <div class="card reveal span-4" style="--i:3">
+        <div class="tagline">University of Stuttgart</div>
+        <div><div class="num"><span data-count="1.0" data-suffix=" (A)">0</span></div>
+        <div class="lbl"><b>thesis grade</b> at the Institute of Flight Mechanics and Controls, the highest grade on the German scale.</div></div>
+      </div>
+      <div class="card reveal span-4" style="--i:4">
+        <div class="tagline">German University in Cairo</div>
+        <div><div class="num"><span data-count="3" data-prefix="#">0</span></div>
+        <div class="lbl"><b>rank in Mechatronics by cumulative GPA</b>, 0.93 (≈ 4.0). GUC scholarship awarded on that ranking; DAAD scholarship for a semester in Berlin.</div></div>
+      </div>
+      <div class="card reveal span-4" style="--i:5">
+        <div class="tagline">Hands on hardware</div>
+        <div><div class="num"><span data-count="8">0</span></div>
+        <div class="lbl"><b>robot platforms</b>: blimp, quadcopter, 4-drone swarm, Unitree Go1, TurtleBot 3, Franka Panda, RTK rover, Jetson robot arm.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker">Selected work</div>
+      <h2>Eleven projects, <em>measured</em> not described.</h2>
+      <p>Every number and every figure comes from the project's own repository, logs or outputs. Client work under NDA is described at a general level, without names.</p>
+    </div>
+
+    <div class="projects">
+
+      <article class="card proj reveal">
+        <div class="proj-media">
+          <div class="grid-2">
+            <div class="cell wide" style="--ar:1010/568"><img src="assets/media/blimp_real.jpg" alt="The real research airship in flight during an outdoor experiment" loading="lazy"><span class="caption">the real airship in flight · outdoor experiment, FRPG / Perceiving Systems</span></div>
+            <div class="cell wide" style="--ar:2.4"><video src="assets/media/blimp_nn3d_viewer.mp4" poster="assets/media/blimp_nn3d_viewer.jpg" autoplay muted loop playsinline></video><span class="caption">deployment model in the interactive 3D viewer</span></div>
+            <div class="cell" style="--ar:1.35"><video src="assets/media/blimp_prediction.mp4" poster="assets/media/blimp_prediction.jpg" autoplay muted loop playsinline></video><span class="caption">prediction vs ground truth</span></div>
+            <div class="cell" style="--ar:1.35"><img src="assets/media/blimp_real_field.jpg" alt="The airship flying over the test field, watched from the ground" loading="lazy"><span class="caption">over the test field · field trial</span></div>
+            <div class="cell wide" style="--ar:2.5"><video src="assets/media/blimp_rollout.mp4" poster="assets/media/blimp_rollout.jpg" autoplay muted loop playsinline></video><span class="caption">recursive rollout, straight-line phase</span></div>
+          </div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-top"><span class="chip grad">Thesis · graded 1.0 (A)</span><span class="chip">PyTorch</span><span class="chip">Physics-informed</span></div>
+          <h3>PR-TCN: physics-residual motion prediction for airships</h3>
+          <div class="sub">Institute of Flight Mechanics and Controls · University of Stuttgart · 2026</div>
+          <p>A docking controller needs to know how a blimp will react to a gust <strong>before</strong> it happens. The prior predictor handled one vehicle in straight flight. I extended it to <strong>17 manoeuvres, five vehicle sizes and four wind models</strong>, and replaced the purely learned model with a frozen analytical rollout plus a gust-conditioned TCN that learns only the residual.</p>
+          <p>The finding I care about most is a negative one: the most accurate analytical prior is <strong>not</strong> the best one to learn on top of. Of ten architectures across eight held-out shifts, the physics-residual model is the only one that beats the baseline on every shift.</p>
+          <div class="stat-row">
+            <div class="stat"><div class="v g">−88.6%</div><div class="k">velocity error vs constant-velocity fallback</div></div>
+            <div class="stat"><div class="v g">4.8 cm</div><div class="k">position error at 1.5 s horizon, vs ~24 cm</div></div>
+            <div class="stat"><div class="v g">519.8 h</div><div class="k">flight recorded · 31,300 episodes released</div></div>
+            <div class="stat"><div class="v g">54</div><div class="k">real-flight episodes · up to −60% position error</div></div>
+            <div class="stat"><div class="v g">10 Hz</div><div class="k">control budget met on embedded hardware</div></div>
+          </div>
+          <div class="tags"><span class="tag">Temporal conv nets</span><span class="tag">Gazebo</span><span class="tag">ROS</span><span class="tag">Bayesian HPO</span><span class="tag">Embedded inference</span></div>
+          <p class="note">Supervised by Pascal Goldschmid, examined by Jun.-Prof. Dr.-Ing. Aamir Ahmad. Builds on <a href="https://arxiv.org/abs/2511.19135" target="_blank" rel="noopener">arXiv:2511.19135</a>. Airship photos: Flight Robotics and Perception Group (iFR, University of Stuttgart) / Perceiving Systems (MPI-IS), from <a href="https://www.youtube.com/watch?v=ihS0_VRD_kk" target="_blank" rel="noopener">Perception-driven Formation Control of Airships</a> (Price, Black, Ahmad) and the <a href="https://github.com/robot-perception-group/Airship-MPC" target="_blank" rel="noopener">Airship-MPC</a> repository. The 1.0 is the top grade on the German scale (A).</p>
+        </div>
+      </article>
+
+      <article class="card proj flip reveal">
+        <div class="proj-media">
+          <div class="grid-2">
+            <div class="cell wide" style="--ar:2.2"><img src="assets/media/rtk_precision.png" alt="RTK positioning quality measured from the field logs: centimetre-level scatter of fixes at rest, and a logged run's RTK ground track at 10 Hz" loading="lazy"><span class="caption">RTK localization quality, measured from the field logs · scatter at rest and a logged run at 10 Hz</span></div>
+            <div class="cell wide" style="--ar:2.145"><img src="assets/media/rtk_validation.png" alt="Replay of the field logs scoring the drivetrain mapping against the RTK course rate: the integrated mapping agrees with RTK in all three windows" loading="lazy"><span class="caption">integration validated by replay · drivetrain mapping scored against the RTK course, 3 / 3 windows</span></div>
+          </div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-top"><span class="chip grad">Client contract</span><span class="chip">ROS 2</span><span class="chip">RTK GNSS</span><span class="chip">Field robotics</span></div>
+          <h3>RTK GNSS localization &amp; waypoint navigation for a field rover</h3>
+          <div class="sub">ROS 2 Humble on a Jetson · dual-antenna RTK receiver · robot_localization EKF · shipped and field-validated, remotely</div>
+          <p>Integrated and hardened the localization chain of an autonomous outdoor rover: a <strong>dual-antenna RTK GNSS receiver</strong> feeding navsat_transform and a <strong>50 Hz robot_localization EKF</strong> that fuses wheel odometry with centimetre-level RTK position, driving go-to-waypoint and go-straight controllers over an RS485 motor driver, with twist_mux arbitration between autonomy and teleop.</p>
+          <p>Because valid field time was the scarce resource, I built a <strong>hardware-in-the-loop simulator that runs the rover's real ROS 2 stack</strong> (only the receiver and motor driver are replaced by models) and validated it against the field record on three independent axes before trusting it. Field campaigns were analysed from the logs; every integration defect found (a drivetrain channel convention, a heading declination bias in navsat_transform, an arming gate starved by a 1 Hz heading topic) shipped with an <strong>offline replay that proves the change against the recorded RTK ground truth</strong>, unit tests against a plant model, a reviewable patch and a scripted field checkpoint. I also wrote the client team's three-tier GNSS/RTK reference.</p>
+          <div class="stat-row">
+            <div class="stat"><div class="v g">50 Hz</div><div class="k">EKF fusing wheel odometry + RTK position</div></div>
+            <div class="stat"><div class="v g">3 mm</div><div class="k">95 % RTK repeatability at rest, 10 Hz fixes</div></div>
+            <div class="stat"><div class="v g">3 / 3</div><div class="k">replay windows agree with RTK after integration</div></div>
+            <div class="stat"><div class="v g">0</div><div class="k">site visits; everything delivered remotely</div></div>
+          </div>
+          <div class="tags"><span class="tag">robot_localization</span><span class="tag">navsat_transform</span><span class="tag">twist_mux</span><span class="tag">HIL simulator</span><span class="tag">Field-log replay</span><span class="tag">Python</span><span class="tag">GNSS reference authored</span></div>
+          <p class="note">Both figures are computed from the actual field logs (relative coordinates only). Client under NDA, described at a general level, names withheld.</p>
+        </div>
+      </article>
+
+      <article class="card proj reveal">
+        <div class="proj-media">
+          <div class="grid-2">
+            <div class="cell wide" style="--ar:1.31"><img src="assets/media/ekf_timeseries_car_77.png" alt="EKF velocity, heading and yaw rate against GPS-derived speed, GPS course and raw gyro for a 42-second driving session" loading="lazy"><span class="caption">raw sensors vs fused estimate · session 77, 458 m at ~40 km/h</span></div>
+            <div class="cell wide" style="--ar:3"><img src="assets/media/ekf_route_car_77.png" alt="Route map: raw 1 Hz GPS fixes and the fused EKF position" loading="lazy"><span class="caption">route · raw 1 Hz GPS fixes vs fused position at IMU rate</span></div>
+          </div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-top"><span class="chip grad">Client contract</span><span class="chip">C++</span><span class="chip">15-state EKF</span></div>
+          <h3>15-state EKF for smartphone GNSS + IMU fusion</h3>
+          <div class="sub">C++ core with Python and C bindings · batch and online modes · cars and motorcycles</div>
+          <p>A sensor-fusion library that turns a phone's raw GNSS fixes and IMU stream into vehicle kinematics at IMU rate: velocity, tangential acceleration, heading, pitch, roll (lean angle for motorcycles), yaw rate and corrected position. What makes it work in practice is the <strong>automatic calibration of the phone's arbitrary mounting orientation into the vehicle frame</strong>, estimated from an ordinary driving session through gravity and velocity alignment rather than a rig. A later engagement on the same system removed the slope effect from the acceleration estimate, which the client describes in the reviews below. Runs on recorded files or on a live stream.</p>
+          <p>Validated on a committed session: the fused velocity tracks speed derived from consecutive GPS fixes with <strong>r = 0.95</strong>, and heading converges within five seconds to a <strong>median error of 0.4° (RMSE 1.3°)</strong> against GPS course over ground, using the fixes as reference because the phone's own speed field is a placeholder with corrupt spikes.</p>
+          <div class="stat-row">
+            <div class="stat"><div class="v g">r = 0.95</div><div class="k">EKF velocity vs GPS-derived speed · RMSE 1.19 m/s</div></div>
+            <div class="stat"><div class="v g">0.4°</div><div class="k">median heading error after convergence · RMSE 1.3°</div></div>
+            <div class="stat"><div class="v g">234 Hz</div><div class="k">fused output from 1 Hz GPS + IMU</div></div>
+          </div>
+          <div class="tags"><span class="tag">GNSS</span><span class="tag">IMU</span><span class="tag">Mount auto-calibration</span><span class="tag">Eigen</span><span class="tag">Python &amp; C bindings</span></div>
+          <p class="note">Figures computed from the repository's own input and EKF output files.</p>
+        </div>
+      </article>
+
+      <article class="card proj flip reveal">
+        <div class="proj-media">
+          <div class="single"><div class="cell" style="aspect-ratio:16/9"><video src="assets/media/swarm_fig8.mp4" poster="assets/media/swarm_fig8.jpg" autoplay muted loop playsinline></video><span class="caption">four drones following a figure-8 trajectory in formation · simulation</span></div></div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-top"><span class="chip grad">Client contract</span><span class="chip">ROS 2</span><span class="chip">PX4</span><span class="chip">Gazebo</span></div>
+          <h3>Multi-drone formation flight</h3>
+          <div class="sub">ROS 2 · PX4 SITL · Gazebo · C++ control · MPC planning</div>
+          <p>A four-drone formation-flight system built on ROS 2 with PX4 software-in-the-loop, flying synchronised trajectories such as the figure-8 shown, with model-predictive planning, a C++ controller, collision avoidance between the drones and an enforced 3D geofence, tested under wind disturbance.</p>
+          <div class="stat-row">
+            <div class="stat"><div class="v g">4</div><div class="k">drones in configurable formations</div></div>
+            <div class="stat"><div class="v g">MPC</div><div class="k">receding-horizon planning</div></div>
+            <div class="stat"><div class="v g">5 m/s</div><div class="k">wind disturbance tolerated</div></div>
+          </div>
+          <div class="tags"><span class="tag">Multi-robot</span><span class="tag">PX4</span><span class="tag">Geofencing</span><span class="tag">C++</span></div>
+          <p class="note">Client under NDA: stack listed, architecture withheld.</p>
+        </div>
+      </article>
+
+      <article class="card proj full reveal">
+        <div class="proj-media">
+          <div class="pipe">
+            <div class="panel">
+              <img src="assets/media/glb_input_01.jpg" alt="One of the 85 input phone photos: the cookie on a wooden stump, outdoors, background visible">
+              <span class="step"><b>1</b>input photo · 1 of 85</span>
+              <span class="status">phone camera, handheld · stage-1 mask overlay dims the background</span>
+              <span class="arrow">→</span>
+            </div>
+            <div class="panel viewer" id="cloud3d" data-src="assets/media/dish_model.glb">
+              <span class="step"><b>2</b>point cloud</span>
+              <div class="modes"><button type="button" data-mode="texture" class="on">texture</button><button type="button" data-mode="height">elevation</button></div>
+              <span class="status">loading…</span>
+              <span class="hint">drag to orbit · scroll to zoom</span>
+              <span class="arrow">→</span>
+            </div>
+            <div class="panel viewer">
+              <model-viewer src="assets/media/dish_model.glb" alt="Textured 3D reconstruction of the cookie, drag to orbit" camera-controls auto-rotate auto-rotate-delay="800" environment-image="neutral" shadow-intensity="1" exposure="1.05" touch-action="pan-y" loading="lazy"></model-viewer>
+              <span class="step"><b>3</b>textured GLB · 0.76 MB</span>
+              <span class="status">120,000 triangles · Draco + WebP</span>
+              <span class="hint">drag to orbit · scroll to zoom</span>
+            </div>
+          </div>
+        </div>
+        <div class="pipe-body">
+          <div class="proj-top"><span class="chip mint">Photogrammetry</span><span class="chip">SAM 2.1</span><span class="chip">COLMAP</span><span class="chip">OpenMVS</span><span class="chip">Interactive</span></div>
+          <h3>dish-to-glb: phone photos to a web-ready 3D model</h3>
+          <div class="sub">Nine stages, one command, every number measured · the model above is the actual pipeline output</div>
+          <div class="cols">
+            <div>
+              <p>85 handheld phone photos in, a <strong>0.76 MB Draco+WebP GLB</strong> out: object only, no table, no floaters, one connected component. <strong>31.9 minutes on a CPU-only laptop.</strong> Metric scale from a printed, calipered ChArUco board.</p>
+              <p>The finding: background isolation is the main per-scan cost control, but <strong>where</strong> you apply it decides whether the scan works. Masking during alignment starved registration (60/85 vs 83/85 images); masking during densification confined depth estimation to ~13% of pixels. <strong>Align unmasked, densify masked.</strong></p>
+            </div>
+            <div>
+              <div class="stat-row">
+                <div class="stat"><div class="v">83 / 85</div><div class="k">images registered · 0.82 px reprojection</div></div>
+                <div class="stat"><div class="v">120k</div><div class="k">triangles in the final mesh</div></div>
+                <div class="stat"><div class="v">31.9 min</div><div class="k">end to end, CPU only, no CUDA</div></div>
+                <div class="stat"><div class="v">0.76 MB</div><div class="k">final GLB · 7.05 MB USDZ</div></div>
+              </div>
+              <div class="tags"><span class="tag">GLB / USDZ</span><span class="tag">Draco</span><span class="tag">ChArUco</span><span class="tag">Blender</span><span class="tag">three.js</span><span class="tag">Python</span></div>
+            </div>
+          </div>
+          <p class="note">Panel 2 is sampled on the reconstructed surface in your browser (200,000 points coloured from the texture, or by elevation) because the dense multi-view-stereo cloud isn't committed to the repository. Panel 3 is the pipeline's real GLB. Input photos are Epic's public RealityScan sample set.</p>
+        </div>
+      </article>
+
+      <article class="card proj reveal">
+        <div class="proj-media">
+          <div class="single"><div class="cell" style="aspect-ratio:528/610"><img src="assets/media/go1_unitree.jpg" alt="Mostafa with the Unitree Go1 quadruped in the IAS lab at the University of Stuttgart" loading="lazy"><span class="caption">with the Go1 · IAS lab, University of Stuttgart · Nov 2024</span></div></div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-top"><span class="chip mint">Legged robot</span><span class="chip">ROS</span><span class="chip">Gazebo</span><span class="chip">Path planning</span></div>
+          <h3>Autonomous navigation &amp; path planning for the Unitree Go1</h3>
+          <div class="sub">Robotics &amp; ROS engineer · fully funded workshop, IAS, University of Stuttgart</div>
+          <p>Developed navigation and path-planning for the Unitree Go1 quadruped as part of a fully funded workshop at the University of Stuttgart's IAS: <strong>waypoint tracking, obstacle avoidance and autonomous mobility</strong> in ROS and Gazebo, using an artificial-potential-field planner. Improved the robot's ability to navigate dynamic environments and contributed the results to a DAAD-supported multi-robot cooperation project alongside TurtleBot 3 and Franka Emika Panda platforms.</p>
+          <div class="stat-row">
+            <div class="stat"><div class="v">Go1</div><div class="k">Unitree quadruped, real hardware</div></div>
+            <div class="stat"><div class="v">3</div><div class="k">heterogeneous robot platforms integrated</div></div>
+            <div class="stat"><div class="v">DAAD</div><div class="k">funded exchange, presented to industry</div></div>
+          </div>
+          <div class="tags"><span class="tag">Artificial potential fields</span><span class="tag">Obstacle avoidance</span><span class="tag">Waypoint tracking</span><span class="tag">Multi-robot</span><span class="tag">Python</span></div>
+        </div>
+      </article>
+
+      <article class="card proj flip reveal">
+        <div class="proj-media">
+          <div class="grid-2">
+            <div class="cell" style="--ar:631/808"><img src="assets/media/uvc_rviz_slam.png" alt="RViz view of the SLAM map being built in simulation: laser scan, costmap and the robot's TF frames" loading="lazy"><span class="caption">RViz · slam_toolbox map + laser scan, in simulation</span></div>
+            <div class="cell" style="--ar:1.37"><img src="assets/media/uvc_tf_tree.svg" alt="TF frame tree of the robot: map, odom, base_link, wheels, chassis, camera and lidar frames with publish rates" loading="lazy"><span class="caption">TF tree recorded from the running system (view_frames)</span></div>
+          </div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-top"><span class="chip mint">ROS 2 Jazzy</span><span class="chip">Nav2</span><span class="chip">slam_toolbox</span><span class="chip">Simulation</span></div>
+          <h3>UV-C disinfection robot: autonomy stack in simulation</h3>
+          <div class="sub">Gazebo Harmonic · differential drive · human-safety interlocks · 262 passing tests</div>
+          <p>The autonomy software for an indoor UV-C disinfection robot, built and validated in simulation: the robot maps a room with <strong>slam_toolbox</strong>, plans an optimised route between disinfection waypoints with <strong>Nav2</strong>, holds the lamps on for configurable dwell times, and shuts them down immediately on human detection, because the payload is genuinely dangerous. My work was the simulation and software stack (mapping, navigation, route optimisation, lamp control and safety), with the hardware deployment path documented.</p>
+          <div class="stat-row">
+            <div class="stat"><div class="v">262</div><div class="k">passing tests across the stack</div></div>
+            <div class="stat"><div class="v">37.7 Hz</div><div class="k">odom → base_link, from the recorded TF tree</div></div>
+            <div class="stat"><div class="v">DWB</div><div class="k">Nav2 local planner</div></div>
+          </div>
+          <div class="tags"><span class="tag">Gazebo Harmonic</span><span class="tag">Route optimisation</span><span class="tag">Safety systems</span><span class="tag">Python</span></div>
+          <a class="plink" href="https://github.com/SeniorX52/UV-C-Disinfection-Robot" target="_blank" rel="noopener">Source on GitHub <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+        </div>
+      </article>
+
+      <article class="card proj reveal">
+        <div class="proj-media">
+          <div class="grid-2">
+            <div class="cell" style="--ar:16/9"><video src="assets/media/ball_laser.mp4" poster="assets/media/ball_laser.jpg" autoplay muted loop playsinline></video><span class="caption">laser following</span></div>
+            <div class="cell" style="--ar:16/9"><video src="assets/media/ball_circle.mp4" poster="assets/media/ball_circle.jpg" autoplay muted loop playsinline></video><span class="caption">circle trajectory</span></div>
+            <div class="cell" style="--ar:16/9"><video src="assets/media/ball_catch.mp4" poster="assets/media/ball_catch.jpg" autoplay muted loop playsinline></video><span class="caption">catch &amp; stabilise</span></div>
+            <div class="cell" style="--ar:16/9"><img src="assets/media/ball_rig.jpg" alt="The 2-DOF platform" loading="lazy"><span class="caption">the rig</span></div>
+            <div class="cell wide" style="--ar:1455/790"><img src="assets/media/ball_gui.jpg" alt="JavaFX tuning and telemetry GUI" loading="lazy"><span class="caption">JavaFX live-tuning GUI</span></div>
+          </div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-top"><span class="chip mint">STM32</span><span class="chip">OpenCV</span><span class="chip">Real-time control</span></div>
+          <h3>Vision-guided 2-DOF ball balancing platform</h3>
+          <div class="sub">Full stack: optics → firmware → controller → GUI</div>
+          <p>A ball is balanced and driven along arbitrary trajectories on a tilting plate by an <strong>STM32F103C8T6</strong> closing the loop on positions from an OpenCV pipeline. Three controllers are switchable at runtime (<strong>PID, PV and LQR</strong>), with a Kalman filter for velocity and an EMA on the control output. Gains are tuned live over serial while the plate is running.</p>
+          <div class="stat-row">
+            <div class="stat"><div class="v">3</div><div class="k">controllers, comparable live</div></div>
+            <div class="stat"><div class="v">2-DOF</div><div class="k">MG996R servo tilt platform</div></div>
+            <div class="stat"><div class="v">Live</div><div class="k">serial tuning &amp; telemetry</div></div>
+          </div>
+          <div class="tags"><span class="tag">Embedded C</span><span class="tag">FreeRTOS</span><span class="tag">Kalman filter</span><span class="tag">PID / LQR</span><span class="tag">JavaFX</span><span class="tag">UART · TCP/IP</span></div>
+          <a class="plink" href="https://github.com/SeniorX52/Vision-Guided-Ball-Balancing-2DOF" target="_blank" rel="noopener">Source &amp; full report <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+        </div>
+      </article>
+
+      <article class="card proj flip reveal">
+        <div class="proj-media">
+          <div class="grid-2">
+            <div class="cell" style="--ar:960/1280"><img src="assets/media/mini_drone.jpg" alt="The DroneX52 quadcopter next to its FlySky transmitter" loading="lazy"><span class="caption">the airframe · STM32 flight controller, FlySky transmitter</span></div>
+            <div class="cell" style="--ar:607/675"><img src="assets/media/drone_flight.jpg" alt="The quadcopter hovering during a night test flight" loading="lazy"><span class="caption">hover test · night flight</span></div>
+            <div class="cell wide" style="--ar:800/432"><img src="assets/media/mini_drone_gui.jpg" alt="Ground station: live PID tuning and real-time pitch, roll, yaw and hover plots" loading="lazy"><span class="caption">ground station · live PID tuning, desired vs actual pitch / roll / yaw / hover</span></div>
+          </div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-top"><span class="chip mint">STM32</span><span class="chip">Flight control</span><span class="chip">Sensor fusion</span></div>
+          <h3>DroneX52: an STM32 quadcopter with a custom flight controller</h3>
+          <div class="sub">Bare-metal STM32F103 · PID stabilisation · IMU + barometer fusion · Multi-Robot Systems Research Group, GUC · 2024</div>
+          <p>A quadcopter built from the frame up around an <strong>STM32F103 flight controller</strong>: PID loops on pitch, roll and yaw driven by fused gyroscope, accelerometer and barometer data, UART links for Bluetooth and WiFi control, and a hand-motion mode flown from the smart glove further down this page. It flies: the night hover above is a real test flight.</p>
+          <p>The ground station is the part that made tuning tractable: a Java GUI plots desired against actual pitch, roll, yaw and hover in real time and <strong>pushes PID gains to the controller live</strong>, so gains were tuned in the air rather than by recompiling firmware.</p>
+          <div class="stat-row">
+            <div class="stat"><div class="v">3</div><div class="k">PID loops: pitch, roll, yaw</div></div>
+            <div class="stat"><div class="v">3</div><div class="k">sensors fused: gyro, accel, baro</div></div>
+            <div class="stat"><div class="v">Live</div><div class="k">gain tuning over UART</div></div>
+          </div>
+          <div class="tags"><span class="tag">STM32F103</span><span class="tag">Embedded C</span><span class="tag">PID</span><span class="tag">IMU</span><span class="tag">Java GUI</span><span class="tag">UART · Bluetooth · WiFi</span></div>
+          <a class="plink" href="https://github.com/SeniorX52/dronex52" target="_blank" rel="noopener">Source on GitHub <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+        </div>
+      </article>
+
+      <article class="card proj reveal">
+        <div class="proj-media">
+          <div class="grid-3">
+            <div class="cell cover" style="--ar:.9"><img src="assets/media/clock_01.jpg" alt="The ESP32-S3 touch alarm clock running the firmware" loading="lazy"><span class="caption">the device, running the firmware</span></div>
+            <div class="cell cover" style="--ar:.9"><img src="assets/media/clock_02.jpg" alt="The clock's touch display showing the alarm interface" loading="lazy"><span class="caption">LVGL touch UI</span></div>
+            <div class="cell cover" style="--ar:.9"><img src="assets/media/clock_03.jpg" alt="The clock hardware" loading="lazy"><span class="caption">ESP32-S3 3.5" touch board</span></div>
+          </div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-top"><span class="chip mint">Firmware</span><span class="chip">ESP32-S3</span><span class="chip">ESP-IDF</span><span class="chip">LVGL</span></div>
+          <h3>Zmanim alarm clock: full firmware for an ESP32-S3 touch display</h3>
+          <div class="sub">Off-the-shelf ESP32-S3 3.5" touch board · every line of software mine: drivers, UI, alarm engine, solar-time engine, simulator</div>
+          <p>Firmware for an alarm clock that understands <strong>zmanim, the halachic times derived from sunrise and sunset</strong>. A NOAA solar calculator and a bundled world-city database (coordinates, elevation, time zone) compute the day's times on-device, so an alarm can be set as <em>"10 minutes before Shma"</em> and it moves with the calendar; alarms carry day-of-week filters and offsets, with a test suite covering offset maths, 12/24-hour conversion, time-zone handling and edge cases.</p>
+          <p>Around that engine: up to eight labelled alarms and a countdown timer, an <strong>LVGL 8 touch interface</strong> at 60 FPS, MP3/WAV alarm sounds through the board's I2S DAC, a battery-backed RTC, settings persisted in NVS and a sub-5 mA sleep mode, with the ST7789 display, CST328 touch, PCM5101 audio and PCF85063 RTC drivers written against ESP-IDF 5. A <strong>Windows LVGL simulator</strong> runs the same UI on a PC for development, and a hardware-abstraction layer let the shared UI and alarm code be ported to the ESP32 "CYD" board.</p>
+          <div class="stat-row">
+            <div class="stat"><div class="v">8</div><div class="k">alarms + timer, persisted in NVS</div></div>
+            <div class="stat"><div class="v">60 FPS</div><div class="k">LVGL UI · &lt;50 ms touch response</div></div>
+            <div class="stat"><div class="v">&lt;5 mA</div><div class="k">standby · ~1.4 MB flash footprint</div></div>
+          </div>
+          <div class="tags"><span class="tag">ESP-IDF 5</span><span class="tag">LVGL 8</span><span class="tag">FreeRTOS</span><span class="tag">I2S audio · libhelix-mp3</span><span class="tag">PCF85063 RTC</span><span class="tag">NOAA solar calc</span><span class="tag">PC simulator</span><span class="tag">C</span></div>
+        </div>
+      </article>
+
+      <article class="card proj flip reveal">
+        <div class="proj-media">
+          <div class="grid-2">
+            <div class="cell wide light" style="--ar:2"><img src="assets/media/yolo_results.jpg" alt="Training and validation curves" loading="lazy"><span class="caption">training &amp; validation curves</span></div>
+            <div class="cell light" style="--ar:1.4"><img src="assets/media/yolo_pr.png" alt="Precision-recall curve" loading="lazy"><span class="caption">precision–recall</span></div>
+            <div class="cell light" style="--ar:1.4"><img src="assets/media/yolo_confusion.png" alt="Normalised confusion matrix" loading="lazy"><span class="caption">confusion matrix</span></div>
+          </div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-top"><span class="chip mint">Perception</span><span class="chip">YOLOv8</span><span class="chip">Custom training</span></div>
+          <h3>Custom-trained YOLOv8 ball &amp; laser detector</h3>
+          <div class="sub">Classical CV benchmarked against a trained model, switchable at runtime</div>
+          <p>The HSV pipeline was fast but fragile under changing light. I built the full loop (capture, annotation, training, evaluation) for a <strong>custom YOLOv8-nano</strong> detector, and kept both methods live so the trade-off is measurable rather than asserted.</p>
+          <div class="tags"><span class="tag">Ultralytics</span><span class="tag">OpenCV</span><span class="tag">Dataset annotation</span><span class="tag">Python</span></div>
+          <a class="plink" href="https://github.com/SeniorX52/real-time-ball-laser-detection" target="_blank" rel="noopener">Source on GitHub <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker">Client reviews</div>
+      <h2>Twelve contracts, <em>twelve five-star reviews.</em> <span class="stars3d big" role="img" aria-label="5.0 out of 5 stars"><i class="st" style="--k:0"><i class="s3"><b class="f"></b><b class="b"></b></i></i><i class="st" style="--k:1"><i class="s3"><b class="f"></b><b class="b"></b></i></i><i class="st" style="--k:2"><i class="s3"><b class="f"></b><b class="b"></b></i></i><i class="st" style="--k:3"><i class="s3"><b class="f"></b><b class="b"></b></i></i><i class="st" style="--k:4"><i class="s3"><b class="f"></b><b class="b"></b></i></i></span></h2>
+      <p>Every review below is a screenshot from my Upwork profile, unedited.</p>
+    </div>
+    <div class="reviews" id="reviewgrid">
+      <article class="card rv reveal" style="--i:0">
+        <div class="rv-head"><span class="uw"><img src="assets/logos/upwork.svg" alt="Upwork"></span><div class="t"><h4>Robotics sub-contract</h4><div class="d">Upwork · Jan 20, 2026</div></div><span class="stars3d" role="img" aria-label="5.0 out of 5 stars"><i class="st" style="--k:0"><i class="s3"><b class="f"></b><b class="b"></b></i></i><i class="st" style="--k:1"><i class="s3"><b class="f"></b><b class="b"></b></i></i><i class="st" style="--k:2"><i class="s3"><b class="f"></b><b class="b"></b></i></i><i class="st" style="--k:3"><i class="s3"><b class="f"></b><b class="b"></b></i></i><i class="st" style="--k:4"><i class="s3"><b class="f"></b><b class="b"></b></i></i><em>5.0</em></span></div>
+        <p class="pull">"His code always worked out of the box and I didn't have to make several iterations."</p>
+        <a class="zoom shot" href="assets/media/reviews/r0.png" data-cap="Upwork review, Jan 20, 2026, 5.0"><img src="assets/media/reviews/r0.png" alt="Five-star Upwork review: more of an employee than a sub-contractor, cared that the whole system works, responsive even at weekends, code worked out of the box, highly recommended" loading="lazy"></a>
+      </article>
+      <article class="card rv reveal" style="--i:1">
+        <div class="rv-head"><span class="uw"><img src="assets/logos/upwork.svg" alt="Upwork"></span><div class="t"><h4>Debug driver actions (EKF fix)</h4><div class="d">Upwork · Jun 15 – Jul 18, 2026</div></div><span class="stars3d" role="img" aria-label="5.0 out of 5 stars"><i class="st" style="--k:0"><i class="s3"><b class="f"></b><b class="b"></b></i></i><i class="st" style="--k:1"><i class="s3"><b class="f"></b><b class="b"></b></i></i><i class="st" style="--k:2"><i class="s3"><b class="f"></b><b class="b"></b></i></i><i class="st" style="--k:3"><i class="s3"><b class="f"></b><b class="b"></b></i></i><i class="st" style="--k:4"><i class="s3"><b class="f"></b><b class="b"></b></i></i><em>5.0</em></span></div>
+        <p class="pull">"He knew both to implement the theory and where patches should be added in order to make it work."</p>
+        <a class="zoom shot" href="assets/media/reviews/r2.png" data-cap="Upwork review, EKF slope-effect fix, Jun–Jul 2026, 5.0"><img src="assets/media/reviews/r2.png" alt="Five-star Upwork review: fixed a problem in our EKF by cancelling the slope effect on acceleration estimation; fast, high-quality solutions with deep understanding of theory and project need" loading="lazy"></a>
+      </article>
+      <article class="card rv reveal" style="--i:2">
+        <div class="rv-head"><span class="uw"><img src="assets/logos/upwork.svg" alt="Upwork"></span><div class="t"><h4>ROS 2 programming for a differential-drive mobile robot</h4><div class="d">Upwork · Jan 8 – 15, 2026</div></div><span class="stars3d" role="img" aria-label="5.0 out of 5 stars"><i class="st" style="--k:0"><i class="s3"><b class="f"></b><b class="b"></b></i></i><i class="st" style="--k:1"><i class="s3"><b class="f"></b><b class="b"></b></i></i><i class="st" style="--k:2"><i class="s3"><b class="f"></b><b class="b"></b></i></i><i class="st" style="--k:3"><i class="s3"><b class="f"></b><b class="b"></b></i></i><i class="st" style="--k:4"><i class="s3"><b class="f"></b><b class="b"></b></i></i><em>5.0</em></span></div>
+        <p class="pull">"Mostafa met a very tight deadline and managed the work perfectly."</p>
+        <a class="zoom shot" href="assets/media/reviews/r9.png" data-cap="Upwork review, ROS 2 differential-drive robot, Jan 2026, 5.0"><img src="assets/media/reviews/r9.png" alt="Five-star Upwork review: met a very tight deadline, strong technical expertise, excellent problem solving, highly reliable and proactive" loading="lazy"></a>
+      </article>
+      <article class="card rv reveal" style="--i:3">
+        <div class="rv-head"><span class="uw"><img src="assets/logos/upwork.svg" alt="Upwork"></span><div class="t"><h4>ESP32 touchscreen alarm clock with custom features</h4><div class="d">Upwork · Nov 17, 2025 – Jan 23, 2026</div></div><span class="stars3d" role="img" aria-label="5.0 out of 5 stars"><i class="st" style="--k:0"><i class="s3"><b class="f"></b><b class="b"></b></i></i><i class="st" style="--k:1"><i class="s3"><b class="f"></b><b class="b"></b></i></i><i class="st" style="--k:2"><i class="s3"><b class="f"></b><b class="b"></b></i></i><i class="st" style="--k:3"><i class="s3"><b class="f"></b><b class="b"></b></i></i><i class="st" style="--k:4"><i class="s3"><b class="f"></b><b class="b"></b></i></i><em>5.0</em></span></div>
+        <p class="pull">"Mostafa really treated this project like his own. He went above and beyond expectations."</p>
+        <a class="zoom shot" href="assets/media/reviews/r7.png" data-cap="Upwork review, ESP32 alarm clock, Nov 2025 – Jan 2026, 5.0"><img src="assets/media/reviews/r7.png" alt="Five-star Upwork review: treated the project like his own, went above and beyond, added many features, highly recommended" loading="lazy"></a>
+      </article>
+      <article class="card rv more" style="--i:0">
+        <div class="rv-head"><span class="uw"><img src="assets/logos/upwork.svg" alt="Upwork"></span><div class="t"><h4>C++ audio capture and encoding app</h4><div class="d">Upwork · Jan 2 – 8, 2026</div></div><span class="stars3d" role="img" aria-label="5.0 out of 5 stars"><i class="st" style="--k:0"><i class="s3"><b class="f"></b><b class="b"></b></i></i><i class="st" style="--k:1"><i class="s3"><b class="f"></b><b class="b"></b></i></i><i class="st" style="--k:2"><i class="s3"><b class="f"></b><b class="b"></b></i></i><i class="st" style="--k:3"><i class="s3"><b class="f"></b><b class="b"></b></i></i><i class="st" style="--k:4"><i class="s3"><b class="f"></b><b class="b"></b></i></i><em>5.0</em></span></div>
+        <p class="pull">"Knows what he's doing unlike 80% of people here that are willing to accept a job they have no idea about."</p>
+        <a class="zoom shot" href="assets/media/reviews/r11.png" data-cap="Upwork review, C++ audio capture app, Jan 2026, 5.0"><img src="assets/media/reviews/r11.png" alt="Five-star Upwork review: amazingly professional job, well-documented code, delivered very fast" loading="lazy"></a>
+      </article>
+      <article class="card rv more" style="--i:1">
+        <div class="rv-head"><span class="uw"><img src="assets/logos/upwork.svg" alt="Upwork"></span><div class="t"><h4>ESP-Home + StackChan firmware integration</h4><div class="d">Upwork · Aug 5 – 17, 2026</div></div><span class="stars3d" role="img" aria-label="5.0 out of 5 stars"><i class="st" style="--k:0"><i class="s3"><b class="f"></b><b class="b"></b></i></i><i class="st" style="--k:1"><i class="s3"><b class="f"></b><b class="b"></b></i></i><i class="st" style="--k:2"><i class="s3"><b class="f"></b><b class="b"></b></i></i><i class="st" style="--k:3"><i class="s3"><b class="f"></b><b class="b"></b></i></i><i class="st" style="--k:4"><i class="s3"><b class="f"></b><b class="b"></b></i></i><em>5.0</em></span></div>
+        <p class="pull">"The best thing about working with Mustafa is that he is very clear and honest."</p>
+        <a class="zoom shot" href="assets/media/reviews/r1.png" data-cap="Upwork review, StackChan firmware, Aug 2026, 5.0"><img src="assets/media/reviews/r1.png" alt="Five-star Upwork review: reliable, clear and honest, completed on time, always available for extra support" loading="lazy"></a>
+      </article>
+      <article class="card rv more" style="--i:2">
+        <div class="rv-head"><span class="uw"><img src="assets/logos/upwork.svg" alt="Upwork"></span><div class="t"><h4>STL desktop tool: mirror orthoses, engrave logo and patient text</h4><div class="d">Upwork · Jan 22 – Feb 2, 2026 · repeat client</div></div><span class="stars3d" role="img" aria-label="5.0 out of 5 stars"><i class="st" style="--k:0"><i class="s3"><b class="f"></b><b class="b"></b></i></i><i class="st" style="--k:1"><i class="s3"><b class="f"></b><b class="b"></b></i></i><i class="st" style="--k:2"><i class="s3"><b class="f"></b><b class="b"></b></i></i><i class="st" style="--k:3"><i class="s3"><b class="f"></b><b class="b"></b></i></i><i class="st" style="--k:4"><i class="s3"><b class="f"></b><b class="b"></b></i></i><em>5.0</em></span></div>
+        <p class="pull">"This is already the second time I have worked with Mostafa. As usual, everything worked out very well."</p>
+        <a class="zoom shot" href="assets/media/reviews/r6.png" data-cap="Upwork review, Orthosis Customizer, Jan–Feb 2026, 5.0"><img src="assets/media/reviews/r6.png" alt="Five-star Upwork review from a repeat client: clear communication, reliable work, delivered on time, fully recommended" loading="lazy"></a>
+      </article>
+      <article class="card rv more" style="--i:3">
+        <div class="rv-head"><span class="uw"><img src="assets/logos/upwork.svg" alt="Upwork"></span><div class="t"><h4>LadybugCapPro SDK command-line tool</h4><div class="d">Upwork · Feb 3 – 11, 2026</div></div><span class="stars3d" role="img" aria-label="5.0 out of 5 stars"><i class="st" style="--k:0"><i class="s3"><b class="f"></b><b class="b"></b></i></i><i class="st" style="--k:1"><i class="s3"><b class="f"></b><b class="b"></b></i></i><i class="st" style="--k:2"><i class="s3"><b class="f"></b><b class="b"></b></i></i><i class="st" style="--k:3"><i class="s3"><b class="f"></b><b class="b"></b></i></i><i class="st" style="--k:4"><i class="s3"><b class="f"></b><b class="b"></b></i></i><em>5.0</em></span></div>
+        <p class="pull">"He delivered promptly, met all requirements, and provided a correct and reliable solution."</p>
+        <a class="zoom shot" href="assets/media/reviews/r5.png" data-cap="Upwork review, LadybugCapPro SDK CLI, Feb 2026, 5.0"><img src="assets/media/reviews/r5.png" alt="Five-star Upwork review: delivered promptly, met all requirements, strong technical skills and professional communication" loading="lazy"></a>
+      </article>
+      <article class="card rv more" style="--i:4">
+        <div class="rv-head"><span class="uw"><img src="assets/logos/upwork.svg" alt="Upwork"></span><div class="t"><h4>Contract review</h4><div class="d">Upwork · May 15, 2026</div></div><span class="stars3d" role="img" aria-label="5.0 out of 5 stars"><i class="st" style="--k:0"><i class="s3"><b class="f"></b><b class="b"></b></i></i><i class="st" style="--k:1"><i class="s3"><b class="f"></b><b class="b"></b></i></i><i class="st" style="--k:2"><i class="s3"><b class="f"></b><b class="b"></b></i></i><i class="st" style="--k:3"><i class="s3"><b class="f"></b><b class="b"></b></i></i><i class="st" style="--k:4"><i class="s3"><b class="f"></b><b class="b"></b></i></i><em>5.0</em></span></div>
+        <p class="pull">"Rare talent - intelligent, hardworking and committed."</p>
+        <a class="zoom shot" href="assets/media/reviews/r4.png" data-cap="Upwork review, May 15, 2026, 5.0"><img src="assets/media/reviews/r4.png" alt="Five-star Upwork review: rare talent, intelligent, hardworking and committed" loading="lazy"></a>
+      </article>
+      <article class="card rv more" style="--i:5">
+        <div class="rv-head"><span class="uw"><img src="assets/logos/upwork.svg" alt="Upwork"></span><div class="t"><h4>Contract review</h4><div class="d">Upwork</div></div><span class="stars3d" role="img" aria-label="5.0 out of 5 stars"><i class="st" style="--k:0"><i class="s3"><b class="f"></b><b class="b"></b></i></i><i class="st" style="--k:1"><i class="s3"><b class="f"></b><b class="b"></b></i></i><i class="st" style="--k:2"><i class="s3"><b class="f"></b><b class="b"></b></i></i><i class="st" style="--k:3"><i class="s3"><b class="f"></b><b class="b"></b></i></i><i class="st" style="--k:4"><i class="s3"><b class="f"></b><b class="b"></b></i></i><em>5.0</em></span></div>
+        <p class="pull">"Very communicative, professional and committed for the project success beyond his part."</p>
+        <a class="zoom shot" href="assets/media/reviews/r8.png" data-cap="Upwork review, 5.0"><img src="assets/media/reviews/r8.png" alt="Five-star Upwork review: communicative, professional and committed to project success beyond his part" loading="lazy"></a>
+      </article>
+      <article class="card rv more" style="--i:6">
+        <div class="rv-head"><span class="uw"><img src="assets/logos/upwork.svg" alt="Upwork"></span><div class="t"><h4>Contract review</h4><div class="d">Upwork</div></div><span class="stars3d" role="img" aria-label="5.0 out of 5 stars"><i class="st" style="--k:0"><i class="s3"><b class="f"></b><b class="b"></b></i></i><i class="st" style="--k:1"><i class="s3"><b class="f"></b><b class="b"></b></i></i><i class="st" style="--k:2"><i class="s3"><b class="f"></b><b class="b"></b></i></i><i class="st" style="--k:3"><i class="s3"><b class="f"></b><b class="b"></b></i></i><i class="st" style="--k:4"><i class="s3"><b class="f"></b><b class="b"></b></i></i><em>5.0</em></span></div>
+        <p class="pull">"A very intelligent, hardworking and committed individual."</p>
+        <a class="zoom shot" href="assets/media/reviews/r3.png" data-cap="Upwork review, 5.0"><img src="assets/media/reviews/r3.png" alt="Five-star Upwork review: very intelligent, hardworking and committed" loading="lazy"></a>
+      </article>
+      <article class="card rv more" style="--i:7">
+        <div class="rv-head"><span class="uw"><img src="assets/logos/upwork.svg" alt="Upwork"></span><div class="t"><h4>3D desktop application for custom insole adaptation</h4><div class="d">Upwork · Jan 8 – 14, 2026</div></div><span class="stars3d" role="img" aria-label="5.0 out of 5 stars"><i class="st" style="--k:0"><i class="s3"><b class="f"></b><b class="b"></b></i></i><i class="st" style="--k:1"><i class="s3"><b class="f"></b><b class="b"></b></i></i><i class="st" style="--k:2"><i class="s3"><b class="f"></b><b class="b"></b></i></i><i class="st" style="--k:3"><i class="s3"><b class="f"></b><b class="b"></b></i></i><i class="st" style="--k:4"><i class="s3"><b class="f"></b><b class="b"></b></i></i><em>5.0</em></span></div>
+        <p class="pull">Endorsed: Solution Oriented · Clear Communicator · Accountable for Outcomes</p>
+        <a class="zoom shot" href="assets/media/reviews/r10.png" data-cap="Upwork review, 3D insole adaptation tool, Jan 2026, 5.0"><img src="assets/media/reviews/r10.png" alt="Five-star Upwork review with endorsements: solution oriented, clear communicator, accountable for outcomes" loading="lazy"></a>
+      </article>
+    </div>
+    <div class="rv-actions"><button type="button" class="btn" id="rvtoggle" aria-expanded="false" aria-controls="reviewgrid">Show all 12 reviews</button></div>
+  </div>
+</section>
+
+<section id="more">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker">Also built</div>
+      <h2>Range across <em>the whole stack.</em></h2>
+    </div>
+    <div class="mini-grid">
+      <div class="card mini reveal" style="--i:1">
+        <figure class="mini-media"><a class="zoom" href="assets/media/mini_traffic.jpg" data-cap="Smart traffic system, the physical intersection model driven by the Basys3 FPGA"><img src="assets/media/mini_traffic.jpg" alt="Scale-model intersection with working traffic lights" loading="lazy"></a><span class="zoom-hint">click to enlarge</span></figure>
+        <h4>Smart traffic system on FPGA</h4><p>Full traffic-light controller in VHDL on a Basys3, driving a physical intersection model: state machines, timing and hardware debounce. <a class="zoom" href="assets/media/mini_traffic_wiring.jpg" data-cap="Underneath the model, the Basys3 and the wiring to every light" style="display:inline;color:var(--c2)">See the wiring ↗</a></p>
+      </div>
+      <div class="card mini reveal" style="--i:2">
+        <figure class="mini-media"><a class="zoom" href="assets/media/mini_glove.jpg" data-cap="Smart glove, flex sensors on each finger, ATmega32 board, LCD and Bluetooth module"><img src="assets/media/mini_glove.jpg" alt="The glove with flex sensors wired to an ATmega32 development board" loading="lazy" style="object-position:50% 30%"></a><span class="zoom-hint">click to enlarge</span></figure>
+        <h4>Smart glove for the deaf</h4><p>ATmega32 wearable that reads a flex sensor on each finger and translates hand gestures into text on an LCD and over Bluetooth.</p>
+      </div>
+      <div class="card mini reveal" style="--i:3">
+        <figure class="mini-media"><a class="zoom" href="assets/media/mini_dice.jpg" data-cap="Dice Realms, game board: two score sheets, the dice board and the Forgotten Realm"><img src="assets/media/mini_dice.jpg" alt="Dice Realms game board screenshot" loading="lazy"></a><span class="zoom-hint">click to enlarge</span></figure>
+        <h4>Dice Realms</h4><p>Led six engineers on a JavaFX dice-drafting strategy game with hot-seat multiplayer and an AI opponent that placed 1st among ten teams in a university tournament. <a class="zoom" href="assets/media/mini_dice_wizards.jpg" data-cap="Dice Realms, wizard selection screen" style="display:inline;color:var(--c2)">Wizard select ↗</a></p>
+      </div>
+      <div class="card mini reveal" style="--i:4">
+        <figure class="mini-media"><a class="zoom" href="assets/media/mini_stackchan.jpg" data-cap="StackChan + Home Assistant, architecture: one firmware, HA bridge over MQTT, AI agent untouched, verified on hardware"><img src="assets/media/mini_stackchan.jpg" alt="Architecture diagram of the StackChan Home Assistant bridge" loading="lazy" style="object-position:50% 0"></a><span class="zoom-hint">click to enlarge</span></figure>
+        <h4>StackChan × Home Assistant</h4><p>One ESP32-S3 firmware that exposes the M5Stack StackChan robot (head servos, RGB bars, display, camera, speaker) as auto-discovered Home Assistant entities over MQTT, while the on-device AI agent keeps working and can control the home by voice. Verified on hardware.</p>
+      </div>
+      <div class="card mini reveal" style="--i:5">
+        <figure class="mini-media"><a class="zoom" href="assets/media/mini_orthosis.jpg" data-cap="Orthosis Customizer, dual left/right 3D viewer; logo and patient text engraved into the orthosis, exported as separate L and R STL files"><img src="assets/media/mini_orthosis.jpg" alt="Orthosis Customizer desktop app: engraving controls on the left, left and right orthosis 3D views" loading="lazy" style="object-position:0 50%"></a><span class="zoom-hint">click to enlarge</span></figure>
+        <h4>Orthosis Customizer</h4><p>Windows desktop app that engraves a logo, patient name and date into an orthosis STL, then exports matched left and right versions: trimesh-based processing, pick-on-mesh engraving position, and a side-by-side 3D viewer, shipped as an installer.</p>
+      </div>
+      <div class="card mini reveal" style="--i:6">
+        <figure class="mini-media fit"><a class="zoom" href="assets/media/mini_code_aes.png" data-cap="AES in 8086 assembly, main procedure · source excerpt"><img src="assets/media/mini_code_aes.png" alt="Source excerpt from the AES assembly implementation" loading="lazy" style="object-position:0 0"></a><span class="badge-src">source excerpt</span></figure>
+        <h4>AES block cipher in Java &amp; 8086 assembly</h4><p>Led a team of three implementing the Advanced Encryption Standard: a complete Java implementation (SubBytes, ShiftRows, MixColumns, round keys) and an 8086 assembly port in emu8086 carrying the S-box, round-constant and Galois-field tables and the round structure.</p>
+      </div>
+      <div class="card mini reveal" style="--i:7">
+        <figure class="mini-media fit"><a class="zoom" href="assets/media/mini_code_attendance.png" data-cap="Attendance Management System, Attendance.java controller · source excerpt"><img src="assets/media/mini_code_attendance.png" alt="Source excerpt from the attendance controller" loading="lazy" style="object-position:0 0"></a><span class="badge-src">source excerpt</span></figure>
+        <h4>Attendance management system</h4><p>Scalable attendance system for training centres and academic institutions: a JavaFX front end over a MySQL database: courses, batches, sessions and per-session attendance.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker">Skills &amp; tools</div>
+      <h2>What I build with, <em>by layer.</em></h2>
+      <p>Every entry here appears in at least one project above or on the CV.</p>
+    </div>
+    <div class="toolgroups tiles" id="toolgroups">
+      <div class="toolgroup reveal" style="--i:0"><h4>Robotics &amp; simulation</h4><div class="tools">
+        <span class="tool"><span class="lg"><img src="assets/logos/ros.svg" alt=""></span>ROS 2 <small>Humble · Jazzy</small></span>
+        <span class="tool"><span class="lg"><img src="assets/logos/nav2.png" alt=""></span>Nav2</span>
+        <span class="tool"><span class="lg wide"><img src="assets/logos/moveit.png" alt=""></span>MoveIt 2</span>
+        <span class="tool"><span class="lg"><img src="assets/logos/ros.svg" alt=""></span>RViz</span>
+        <span class="tool"><span class="lg"><img src="assets/logos/ros.svg" alt=""></span>slam_toolbox</span>
+        <span class="tool"><span class="lg"><img src="assets/logos/gazebo.svg" alt=""></span>Gazebo</span>
+        <span class="tool"><span class="lg"><img src="assets/logos/webots.png" alt=""></span>Webots</span>
+        <span class="tool txt"><span class="lg">AIR</span>AirSim</span>
+        <span class="tool"><span class="lg"><img src="assets/logos/ardupilot.svg" alt=""></span>ArduPilot SITL</span>
+        <span class="tool"><span class="lg"><img src="assets/logos/ardupilot.svg" alt=""></span>Mission Planner</span>
+        <span class="tool"><span class="lg wide"><img src="assets/logos/px4.png" alt=""></span>PX4</span>
+        <span class="tool"><span class="lg wide"><img src="assets/logos/aerostack2.png" alt=""></span>AeroStack2</span>
+        <span class="tool"><span class="lg"><img src="assets/logos/nvidia.svg" alt=""></span>Isaac Sim</span>
+      </div></div>
+      <div class="toolgroup reveal" style="--i:1"><h4>Perception &amp; 3D</h4><div class="tools">
+        <span class="tool"><span class="lg"><img src="assets/logos/opencv.svg" alt=""></span>OpenCV</span>
+        <span class="tool"><span class="lg"><img src="assets/logos/ultralytics.svg" alt=""></span>Ultralytics YOLO</span>
+        <span class="tool"><span class="lg"><img src="assets/logos/meta.svg" alt=""></span>Segment Anything 2</span>
+        <span class="tool"><span class="lg"><img src="assets/logos/colmap.svg" alt=""></span>COLMAP</span>
+        <span class="tool txt"><span class="lg">MVS</span>OpenMVS</span>
+        <span class="tool"><span class="lg"><img src="assets/logos/blender.svg" alt=""></span>Blender</span>
+        <span class="tool"><span class="lg"><img src="assets/logos/threedotjs.svg" alt=""></span>three.js</span>
+      </div></div>
+      <div class="toolgroup reveal" style="--i:2"><h4>Machine learning &amp; data</h4><div class="tools">
+        <span class="tool"><span class="lg"><img src="assets/logos/pytorch.svg" alt=""></span>PyTorch</span>
+        <span class="tool"><span class="lg"><img src="assets/logos/nvidia.svg" alt=""></span>CUDA</span>
+        <span class="tool"><span class="lg"><img src="assets/logos/numpy.svg" alt=""></span>NumPy</span>
+        <span class="tool"><span class="lg"><img src="assets/logos/pandas.svg" alt=""></span>pandas</span>
+        <span class="tool"><span class="lg"><img src="assets/logos/scipy.svg" alt=""></span>SciPy</span>
+        <span class="tool"><span class="lg"><img src="assets/logos/jupyter.svg" alt=""></span>Jupyter</span>
+      </div></div>
+      <div class="toolgroup reveal" style="--i:3"><h4>Embedded &amp; edge</h4><div class="tools">
+        <span class="tool"><span class="lg"><img src="assets/logos/nvidia.svg" alt=""></span>NVIDIA Jetson <small>Orin Nano</small></span>
+        <span class="tool"><span class="lg"><img src="assets/logos/raspberrypi.svg" alt=""></span>Raspberry Pi</span>
+        <span class="tool"><span class="lg"><img src="assets/logos/stmicroelectronics.svg" alt=""></span>STM32</span>
+        <span class="tool"><span class="lg"><img src="assets/logos/espressif.svg" alt=""></span>ESP32 <small>ESP-IDF</small></span>
+        <span class="tool"><span class="lg"><img src="assets/logos/arm.svg" alt=""></span>Arm Cortex-M</span>
+        <span class="tool"><span class="lg wide"><img src="assets/logos/freertos.png" alt=""></span>FreeRTOS</span>
+        <span class="tool"><span class="lg"><img src="assets/logos/lvgl.svg" alt=""></span>LVGL</span>
+        <span class="tool"><span class="lg"><img src="assets/logos/microchip.svg" alt=""></span>AVR ATmega32</span>
+        <span class="tool"><span class="lg"><img src="assets/logos/linux.svg" alt=""></span>Linux</span>
+        <span class="tool"><span class="lg"><img src="assets/logos/homeassistant.svg" alt=""></span>Home Assistant</span>
+      </div></div>
+      <div class="toolgroup reveal" style="--i:4"><h4>Languages</h4><div class="tools">
+        <span class="tool"><span class="lg"><img src="assets/logos/python.svg" alt=""></span>Python</span>
+        <span class="tool"><span class="lg"><img src="assets/logos/cplusplus.svg" alt=""></span>C++</span>
+        <span class="tool"><span class="lg"><img src="assets/logos/c.svg" alt=""></span>C</span>
+        <span class="tool"><span class="lg"><img src="assets/logos/openjdk.svg" alt=""></span>Java <small>JavaFX</small></span>
+        <span class="tool"><span class="lg"><img src="assets/logos/matlab.png" alt=""></span>MATLAB</span>
+        <span class="tool"><span class="lg"><img src="assets/logos/amd.svg" alt=""></span>VHDL <small>Xilinx</small></span>
+        <span class="tool"><span class="lg"><img src="assets/logos/gnubash.svg" alt=""></span>Bash</span>
+        <span class="tool"><span class="lg"><img src="assets/logos/latex.svg" alt=""></span>LaTeX</span>
+      </div></div>
+      <div class="toolgroup reveal" style="--i:5"><h4>Tooling &amp; design</h4><div class="tools">
+        <span class="tool"><span class="lg"><img src="assets/logos/git.svg" alt=""></span>Git</span>
+        <span class="tool"><span class="lg"><img src="assets/logos/github.svg" alt=""></span>GitHub</span>
+        <span class="tool"><span class="lg"><img src="assets/logos/cmake.svg" alt=""></span>CMake</span>
+        <span class="tool"><span class="lg"><img src="assets/logos/ubuntu.svg" alt=""></span>Ubuntu</span>
+        <span class="tool"><span class="lg"><img src="assets/logos/mysql.svg" alt=""></span>MySQL</span>
+        <span class="tool"><span class="lg"><img src="assets/logos/solidworks.svg" alt=""></span>SolidWorks</span>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<section id="background">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker">Background</div>
+      <h2>Mechatronics, with the practice <em>done in Germany.</em></h2>
+    </div>
+    <div class="card award reveal">
+      <div class="photo"><a class="zoom" href="assets/media/award_guc.jpg" data-cap="Award ceremony at the German University in Cairo"><img src="assets/media/award_guc.jpg" alt="Mostafa receiving an award certificate at the German University in Cairo"></a></div>
+      <div class="body">
+        <h3>Awards &amp; recognition</h3>
+        <div class="sub">GUC scholarship award ceremony · German University in Cairo</div>
+        <ul>
+          <li><span class="dot"></span><span><b>GUC scholarship</b>, sponsored by the German University in Cairo on the strength of cumulative ranking in Mechatronics Engineering.</span></li>
+          <li><span class="dot"></span><span><b>DAAD Scholarship Award</b>: the competitive DAAD scholarship, administered by Ulm University, for outstanding academic performance as a top-ranked Mechatronics student at GUC.</span></li>
+          <li><span class="dot"></span><span><b>Ranked 3rd in Mechatronics</b> by cumulative GPA at the German University in Cairo: 0.93, equivalent to 4.0.</span></li>
+          <li><span class="dot"></span><span><b>Bachelor thesis graded 1.0 (A)</b> at the University of Stuttgart's Institute of Flight Mechanics and Controls.</span></li>
+          <li><span class="dot"></span><span><b>1st place</b>: the Dice Realms AI player won a university-level tournament against ten teams.</span></li>
+          <li><span class="dot"></span><span><b>1st in school</b>: Futures Language School, 97.1% in the mathematics section.</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="tl">
+      <div class="tl-item reveal" style="--i:0"><div class="tl-when">05/2026 – 08/2026</div><h4>Robotics &amp; AI Werkstudent</h4>
+        <div class="orgline"><span class="orglogo"><img src="assets/logos/lucasnuelle.svg" alt="Lucas-Nülle"></span><div class="org">Lucas-Nülle GmbH · Cologne, Germany</div></div>
+        <p>Commissioned a ROS 2 Humble robot-arm platform on a Jetson Orin Nano: a depth camera scanning the workspace into a live 3D model in RViz, a bidirectional MoveIt 2 digital twin between simulation and hardware, GPU-accelerated object detection with autonomous sorting, and a PyQt5 teaching app with a Blockly interface. Built an ArduPilot-based software-in-the-loop drone training environment: quadcopter, fixed-wing, flying-wing and VTOL models, a georeferenced terrain pipeline with a local WMS, and a library of 20 reproducible fault-injection scenarios, packaged for offline deployment. <a href="#creds" style="color:var(--c2)">Reference letter ↓</a></p></div>
+      <div class="tl-item reveal" style="--i:1"><div class="tl-when">03/2026 – 07/2026</div><h4>Bachelor thesis, graded 1.0 (A)</h4>
+        <div class="orgline"><span class="orglogo tall"><img src="assets/logos/unistuttgart.svg" alt="University of Stuttgart" class="inv"></span><div class="org">Institute of Flight Mechanics and Controls (iFR) · University of Stuttgart</div></div>
+        <p>"Extending a TCN-Based Blimp Motion Predictor to Versatile Vehicle and Flight Conditions." Faculty of Aerospace Engineering and Geodesy.</p></div>
+      <div class="tl-item reveal" style="--i:2"><div class="tl-when">07/2025 – 09/2025</div><h4>Embedded Systems Intern</h4>
+        <div class="orgline"><span class="orglogo"><img src="assets/logos/valeo.svg" alt="Valeo"></span><div class="org">Valeo · Cairo, Egypt</div></div>
+        <p>System testing for embedded automotive projects. Built an automated test-management tool that raised throughput by over 200%.</p></div>
+      <div class="tl-item reveal" style="--i:3"><div class="tl-when">11/2024</div><h4>DAAD-funded exchange workshop</h4>
+        <div class="orgline"><span class="orglogo tall"><img src="assets/logos/unistuttgart.svg" alt="University of Stuttgart" class="inv"></span><span class="orglogo"><img src="assets/logos/daad.svg" alt="DAAD"></span><div class="org">IAS · University of Stuttgart</div></div>
+        <p>Represented GUC at "Cooperation of Heterogeneous Agents in Industrial Applications", integrating TurtleBot 3, Unitree Go1 and Franka Emika Panda. Specialised in ROS, Gazebo and Go1 navigation.</p></div>
+      <div class="tl-item reveal" style="--i:4"><div class="tl-when">08/2024</div><h4>Mechatronics Research Intern</h4>
+        <div class="orgline"><span class="orglogo box"><img src="assets/logos/mrs.jpg" alt="Multi-Robot Systems Research Group"></span><div class="org">Multi-Robot Systems (MRS) Research Group · German University in Cairo</div></div>
+        <p>Developed an STM32-based quadcopter with PID control.</p></div>
+      <div class="tl-item reveal" style="--i:5"><div class="tl-when">12/2023 – 06/2024</div><h4>Semester abroad on a DAAD scholarship</h4>
+        <div class="orgline"><span class="orglogo"><img src="assets/logos/giu_dark.png" alt="German International University Berlin"></span><span class="orglogo"><img src="assets/logos/daad.svg" alt="DAAD"></span><div class="org">German International University · Berlin</div></div>
+        <p>Awarded a DAAD scholarship for academic excellence for the fourth semester in Berlin.</p></div>
+      <div class="tl-item reveal" style="--i:6"><div class="tl-when">2022 – 2027</div><h4>BSc Mechatronics Engineering</h4>
+        <div class="orgline"><span class="orglogo"><img src="assets/logos/guc_dark.png" alt="German University in Cairo"></span><div class="org">German University in Cairo · ranked 3rd in Mechatronics by cumulative GPA</div></div>
+        <p>Cumulative GPA 0.93 (≈ 4.0). Faculty of Engineering and Materials Science. GUC scholarship awarded on cumulative ranking.</p></div>
+    </div>
+
+    <div class="creds" id="creds">
+      <div class="card cred reveal" style="--i:0">
+        <span class="lg wide"><img src="assets/logos/amit.svg" alt="AMIT Learning"></span>
+        <div>
+          <div class="kicker-sm">Licence &amp; certification</div>
+          <h4>Embedded Software Engineer: Embedded Systems Diploma</h4>
+          <div class="meta">AMIT Learning · issued Mar 2024 · 175 hours · grade 97%</div>
+          <p>Embedded C and data structures, interfacing protocols, real-time operating systems, testing and validation of embedded systems, automotive bus technology.</p>
+        </div>
+        <a class="zoom thumb" href="assets/media/cert_amit.jpg" data-cap="AMIT Learning, Embedded Systems Diploma, 175 hours, grade 97%"><img src="assets/media/cert_amit.jpg" alt="AMIT Learning Embedded Systems Diploma certificate" loading="lazy"><span class="zoom-hint">certificate</span></a>
+      </div>
+      <div class="card cred reveal" style="--i:1">
+        <span class="lg wide"><img src="assets/logos/lucasnuelle.svg" alt="Lucas-Nülle"></span>
+        <div>
+          <div class="kicker-sm">Reference letter</div>
+          <h4>Letter of Recommendation from Lucas-Nülle GmbH</h4>
+          <div class="meta">Ralf Linnertz, Team Lead Product Management Energy &amp; Industry · Kerpen, 31 Aug 2026 · full letter on request</div>
+          <p>"Consistently demonstrated a very high level of technical expertise, strong analytical thinking, and exceptional problem-solving skills … performed his duties to our full satisfaction. His conduct toward supervisors, colleagues, and project partners was exemplary at all times."</p>
+        </div>
+        <div class="thumb locked" aria-label="Letter of recommendation, blurred, marked confidential, available on request"><img src="assets/media/arbeitszeugnis_blur.jpg" alt="" loading="lazy"><span class="lock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 118 0v4"/></svg>confidential · available on request</span></div>
+      </div>
+      <div class="card cred reveal" style="--i:2">
+        <span class="lg"><img src="assets/logos/ieee.svg" alt="IEEE" class="inv"></span>
+        <div>
+          <div class="kicker-sm">Volunteering</div>
+          <h4>Embedded Systems Tutor</h4>
+          <div class="meta">IEEE GUC Student Branch · Sep 2024 – Jun 2025 · 10 months</div>
+          <p>Ran workshops and training sessions teaching engineering students the fundamentals and advanced topics of embedded systems.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="contact-card reveal">
+      <div class="kicker">Contact</div>
+      <h3>Have a perception, localization or edge problem <em>that's stuck?</em></h3>
+      <p>I'm in Cairo (UTC+2), a full working-day overlap with Europe and the Gulf, mornings with the US east coast. <strong>20–25 hours a week now through July 2027, full time remote after.</strong> Contract, subcontract or employed all work. Tell me what's stuck and I'll tell you honestly whether I'm the right person.</p>
+      <div class="contact-links">
+        <a class="btn btn-primary" href="mailto:mostafa.abdelazizx52@gmail.com">mostafa.abdelazizx52@gmail.com</a>
+        <a class="btn" href="assets/Mostafa_Abdelaziz_CV.pdf" target="_blank" rel="noopener">View CV</a>
+        <a class="btn" href="https://github.com/SeniorX52" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/mostafa-abdelaziz-429420271/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>© <span id="year"></span> Mostafa Abdelaziz</div>
+    <div>static site · no trackers · no cookies · logos are the property of their respective owners</div>
+  </div>
+</footer>
+
+<script>
+(() => {
+  const $ = (s, r = document) => r.querySelector(s);
+  const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  $('#year').textContent = new Date().getFullYear();
+
+  if (matchMedia('(pointer: fine)').matches && !reduce) {
+    const sp = $('.spotlight');
+    addEventListener('pointermove', e => { sp.style.setProperty('--mx', e.clientX + 'px'); sp.style.setProperty('--my', e.clientY + 'px'); }, { passive: true });
+  }
+  $$('.card').forEach(card => {
+    card.addEventListener('pointermove', e => {
+      const r = card.getBoundingClientRect();
+      card.style.setProperty('--x', (e.clientX - r.left) + 'px'); card.style.setProperty('--y', (e.clientY - r.top) + 'px');
+    }, { passive: true });
+  });
+
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+  }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+  $$('.reveal').forEach(el => io.observe(el));
+
+  const fmt = (n, d) => n.toLocaleString('en-US', { minimumFractionDigits: d, maximumFractionDigits: d });
+  const cio = new IntersectionObserver(entries => {
+    entries.forEach(en => {
+      if (!en.isIntersecting) return;
+      const el = en.target, target = parseFloat(el.dataset.count);
+      const dec = (el.dataset.count.split('.')[1] || '').length;
+      const pre = el.dataset.prefix || '', suf = el.dataset.suffix || '';
+      if (reduce) { el.textContent = pre + fmt(target, dec) + suf; cio.unobserve(el); return; }
+      const t0 = performance.now(), dur = 1400;
+      const step = t => {
+        const p = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - p, 4);
+        el.textContent = pre + fmt(target * e, dec) + suf;
+        if (p < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step); cio.unobserve(el);
+    });
+  }, { threshold: 0.6 });
+  $$('[data-count]').forEach(el => cio.observe(el));
+
+  const bar = $('#progress'), nav = $('#nav .nav-inner');
+  let last = scrollY, ticking = false;
+  const onScroll = () => {
+    const h = document.documentElement, max = h.scrollHeight - h.clientHeight;
+    bar.style.width = (max > 0 ? (scrollY / max) * 100 : 0) + '%';
+    nav.style.transform = (scrollY > last && scrollY > 120) ? 'translateY(-140%)' : 'translateY(0)';
+    last = scrollY; ticking = false;
+  };
+  addEventListener('scroll', () => { if (!ticking) { requestAnimationFrame(onScroll); ticking = true; } }, { passive: true });
+
+  const vio = new IntersectionObserver(entries => {
+    entries.forEach(en => { const v = en.target; en.isIntersecting ? v.play().catch(() => {}) : v.pause(); });
+  }, { threshold: 0.15 });
+  $$('video').forEach(v => vio.observe(v));
+
+  $$('.proj .cell > img').forEach(img => {
+    const a = document.createElement('a'); a.className = 'zoom'; a.href = img.getAttribute('src');
+    const cap = img.parentNode.querySelector('.caption'); a.dataset.cap = cap ? cap.textContent : (img.alt || '');
+    img.parentNode.appendChild(a);
+  });
+  const lb = document.createElement('div'); lb.className = 'lb'; lb.innerHTML = '<img alt=""><div class="lb-cap"></div><button class="lb-x" aria-label="Close">×</button>';
+  document.body.appendChild(lb);
+  const lbImg = lb.querySelector('img'), lbCap = lb.querySelector('.lb-cap');
+  const close = () => { lb.classList.remove('open'); lbImg.src = ''; document.body.style.overflow = ''; };
+  document.addEventListener('click', e => {
+    const a = e.target.closest('a.zoom'); if (!a) return;
+    e.preventDefault(); lbImg.src = a.getAttribute('href'); lbCap.textContent = a.dataset.cap || ''; lbCap.hidden = !a.dataset.cap;
+    lb.classList.add('open'); document.body.style.overflow = 'hidden';
+  });
+  lb.addEventListener('click', close);
+  addEventListener('keydown', e => { if (e.key === 'Escape' && lb.classList.contains('open')) close(); });
+
+  $$('.tools').forEach(group => $$('.tool', group).forEach((t, i) => t.style.setProperty('--d', (i * 45) + 'ms')));
+  const tio = new IntersectionObserver(entries => {
+    entries.forEach(en => { if (!en.isIntersecting) return; const t = en.target; t.classList.add('in'); tio.unobserve(t);
+      t.addEventListener('animationend', () => t.classList.add('settled'), { once: true }); });
+  }, { threshold: 0.25, rootMargin: '0px 0px -6% 0px' });
+  if (reduce) $$('.tools .tool').forEach(t => t.classList.add('settled')); else $$('.tools .tool').forEach(t => tio.observe(t));
+
+  const short = [['PR-TCN', 'Thesis · PR-TCN'], ['Vision-guided', 'Ball balancing'], ['DroneX52', 'Quadcopter'], ['dish-to-glb', 'dish-to-glb'], ['RTK GNSS', 'RTK rover'], ['EKF sensor', 'EKF fusion'],
+                 ['Multi-drone', 'Drone swarm'], ['Autonomous navigation', 'Unitree Go1'], ['UV-C', 'UV-C robot'], ['Custom-trained', 'YOLOv8 detector'], ['Zmanim', 'Zmanim clock']];
+  const projects = $$('#work article.proj').map((a, i) => { a.id = a.id || ('project-' + (i + 1)); const h = a.querySelector('h3').textContent.trim();
+    const m = short.find(s => h.startsWith(s[0])); return { el: a, id: a.id, label: m ? m[1] : h.slice(0, 18) }; });
+  const TINT = {
+    'ROS 2': '#3B5BDB', 'Nav2': '#1F7FBF', 'MoveIt 2': '#1E88E5', 'RViz': '#3B5BDB', 'slam_toolbox': '#3B5BDB', 'Gazebo': '#F58113', 'Webots': '#D23B2C',
+    'AirSim': '#3E7BD6', 'ArduPilot SITL': '#3D8B7A', 'Mission Planner': '#3D8B7A', 'PX4': '#3A5FA8', 'AeroStack2': '#2B6CB0', 'Isaac Sim': '#76B900',
+    'OpenCV': '#5C3EE8', 'Ultralytics YOLO': '#1F5DFF', 'Segment Anything 2': '#0467DF', 'COLMAP': '#B7791F', 'OpenMVS': '#6B46C1', 'Blender': '#E87D0D', 'three.js': '#9AA3B5',
+    'PyTorch': '#EE4C2C', 'CUDA': '#76B900', 'NumPy': '#4DABCF', 'pandas': '#6B4FBB', 'SciPy': '#3A7BD5', 'Jupyter': '#F37626',
+    'NVIDIA Jetson': '#76B900', 'Raspberry Pi': '#C51A4A', 'STM32': '#2F6DB5', 'ESP32': '#E7352C', 'Arm Cortex-M': '#0091BD', 'FreeRTOS': '#4CAF50', 'LVGL': '#7A8595',
+    'AVR ATmega32': '#EE2B24', 'Linux': '#FCC624', 'Home Assistant': '#18BCF2',
+    'Python': '#3776AB', 'C++': '#00599C', 'C': '#A8B9CC', 'Java': '#ED8B00', 'MATLAB': '#E16737', 'VHDL': '#ED1C24', 'Bash': '#4EAA25', 'LaTeX': '#008080',
+    'Git': '#F05032', 'GitHub': '#8B949E', 'CMake': '#3F7CC8', 'Ubuntu': '#E95420', 'MySQL': '#4479A1', 'SolidWorks': '#D9252A'
+  };
+  $$('.tool').forEach(t => {
+    const c = t.cloneNode(true); c.querySelectorAll('.lg, small').forEach(n => n.remove());
+    const label = c.textContent.replace(/\s+/g, ' ').trim();
+    if (TINT[label]) t.style.setProperty('--tint', TINT[label]);
+  });
+
+  const rvBtn = $('#rvtoggle'), rvGrid = $('#reviewgrid');
+  if (rvBtn && rvGrid) rvBtn.addEventListener('click', () => {
+    const open = rvGrid.classList.toggle('open'); rvBtn.setAttribute('aria-expanded', open);
+    rvBtn.textContent = open ? 'Show fewer reviews' : 'Show all 12 reviews';
+    $$('.rv.more', rvGrid).forEach((c, i) => { c.classList.remove('in'); if (open) { c.style.setProperty('--i', i); requestAnimationFrame(() => c.classList.add('reveal', 'in')); } });
+    if (!open) rvGrid.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+  });
+
+  const sections = [['top', 'Intro'], ['highlights', 'Highlights'], ['work', 'Selected work'], ['reviews', 'Client reviews'], ['more', 'Also built'], ['skills', 'Tools'], ['background', 'Background'], ['contact', 'Contact']]
+    .map(([id, label]) => ({ id, label, el: document.getElementById(id) })).filter(s => s.el);
+  const rail = document.createElement('aside'); rail.className = 'rail'; rail.setAttribute('aria-label', 'Where you are on the page');
+  rail.innerHTML = '<div class="rail-track"><div class="rail-fill"></div></div><ol>' + sections.map(s =>
+    `<li data-id="${s.id}"><a href="#${s.id}"><i></i><span>${s.label}</span></a>` +
+    (s.id === 'work' ? '<ol class="sub">' + projects.map(p => `<li data-id="${p.id}"><a href="#${p.id}"><i></i><span>${p.label}</span></a></li>`).join('') + '</ol>' : '') + '</li>').join('') + '</ol>';
+  document.body.appendChild(rail);
+  const fill = rail.querySelector('.rail-fill'), secLis = $$(':scope > ol > li', rail), projLis = $$('.sub > li', rail);
+  const mark = (lis, activeIdx) => lis.forEach((li, i) => { li.classList.toggle('active', i === activeIdx); li.classList.toggle('done', i < activeIdx); });
+  const track = () => {
+    const probe = scrollY + innerHeight * 0.38;
+    let si = 0; sections.forEach((s, i) => { if (s.el.offsetTop <= probe) si = i; });
+    if (scrollY + innerHeight >= document.documentElement.scrollHeight - 4) si = sections.length - 1;
+    mark(secLis, si);
+    let pi = -1; if (sections[si].id === 'work') projects.forEach((p, i) => { if (p.el.offsetTop <= probe) pi = i; });
+    mark(projLis, pi);
+    const h = document.documentElement, max = h.scrollHeight - h.clientHeight;
+    fill.style.height = (max > 0 ? Math.min(100, scrollY / max * 100) : 0) + '%';
+  };
+  let rt = false; addEventListener('scroll', () => { if (!rt) { requestAnimationFrame(() => { track(); rt = false; }); rt = true; } }, { passive: true });
+  addEventListener('resize', track, { passive: true }); track();
+})();
+</script>
+<script src="assets/viz.js"></script>
+<script type="module" src="assets/cloud3d.js"></script>
+</body>
+</html>
