@@ -90,18 +90,18 @@ if (host) {
     const put = (d, x, y) => { d.style.left = (x / 16) + '%'; d.style.top = (y / 10) + '%'; };
     const pts = a => a.map(p => p[0].toFixed(1) + ',' + p[1].toFixed(1)).join(' ');
 
-    const SPEED = .55, TURN = .9, R = .1651; let seg = 0, s = 0, turning = 0, yaw = 0, yawFrom = 0, yawTo = 0;
+    const SPEED = .55, TURN = .9, R = .1651, TRACK = .555; let seg = 0, s = 0, turning = 0, yaw = 0, yawFrom = 0, yawTo = 0;
     const trail = []; let trailAcc = 0;
     const segVec = i => { const a = WPS[i], b = WPS[(i + 1) % 4]; return [b[0] - a[0], b[1] - a[1]]; };
     const headingOf = i => { const d = segVec(i); return Math.atan2(-d[1], d[0]); };
     yaw = headingOf(0);
     const pos = [WPS[0][0], WPS[0][1]];
     const step = dt => {
-      if (turning > 0) { turning -= dt; const t = 1 - Math.max(0, turning) / TURN; let d = yawTo - yawFrom; d = Math.atan2(Math.sin(d), Math.cos(d)); yaw = yawFrom + d * (t < .5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2); return; }
+      if (turning > 0) { turning -= dt; const t = 1 - Math.max(0, turning) / TURN; let d = yawTo - yawFrom; d = Math.atan2(Math.sin(d), Math.cos(d)); const prev = yaw; yaw = yawFrom + d * (t < .5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2); const vr = (yaw - prev) / dt * TRACK / 2; [1, 3].forEach(i => { if (wheels[i]) wheels[i].rotation.y += vr * dt / R; }); [0, 2].forEach(i => { if (wheels[i]) wheels[i].rotation.y -= vr * dt / R; }); return; }
       const d = segVec(seg), len = Math.hypot(d[0], d[1]); s += SPEED * dt;
       if (s >= len) { s = 0; seg = (seg + 1) % 4; yawFrom = yaw; yawTo = headingOf(seg); turning = TURN; }
       const a = WPS[seg]; pos[0] = a[0] + d[0] * s / len; pos[1] = a[1] + d[1] * s / len;
-      for (const w of wheels) w.rotation.y -= SPEED * dt / R;
+      for (const w of wheels) w.rotation.y += SPEED * dt / R;
       trailAcc += SPEED * dt; if (trailAcc >= .13) { trailAcc = 0; trail.push([pos[0], pos[1]]); if (trail.length > fixes.length) trail.shift(); }
     };
     if (reduce) { s = 2.6; const d = segVec(1); pos[0] = WPS[1][0] + d[0] * s / 5.3; pos[1] = WPS[1][1] + d[1] * s / 5.3; seg = 1; yaw = headingOf(1); for (let k = 0; k < 40; k++) trail.push([WPS[1][0] + d[0] * (s - k * .13) / 5.3, WPS[1][1]]); }
