@@ -159,8 +159,9 @@
       <article class="card proj flip reveal">
         <div class="proj-media">
           <div class="grid-2">
-            <div class="cell wide" style="--ar:2.2"><img src="assets/media/rtk_precision.png" alt="RTK positioning quality measured from the field logs: centimetre-level scatter of fixes at rest, and a logged run's RTK ground track at 10 Hz" loading="lazy"><span class="caption">RTK localization quality, measured from the field logs · scatter at rest and a logged run at 10 Hz</span></div>
-            <div class="cell wide" style="--ar:2.145"><img src="assets/media/rtk_validation.png" alt="Replay of the field logs scoring the drivetrain mapping against the RTK course rate: the integrated mapping agrees with RTK in all three windows" loading="lazy"><span class="caption">integration validated by replay · drivetrain mapping scored against the RTK course, 3 / 3 windows</span></div>
+            <div class="cell wide" style="--ar:1.6"><img src="assets/media/rtk_mission.svg" alt="System diagram of the RTK localization mission: GNSS satellites, an RTK base station streaming corrections, and the dual-antenna rover following waypoints" loading="lazy"><span class="caption">how the delivered localization chain fits together · system diagram, not data</span></div>
+            <div class="cell wide" style="--ar:2.2"><img src="assets/media/rtk_precision.png" alt="RTK positioning quality measured from the field logs: centimetre-level scatter of fixes at rest, and a logged run's RTK ground track at 10 Hz" loading="lazy"><span class="caption">from the field logs · fixes at rest, a 10 Hz run</span></div>
+            <div class="cell wide" style="--ar:2.145"><img src="assets/media/rtk_validation.png" alt="Replay of the field logs scoring the drivetrain mapping against the RTK course rate: the integrated mapping agrees with RTK in all three windows" loading="lazy"><span class="caption">replay validation · 3 / 3 windows agree with RTK</span></div>
           </div>
         </div>
         <div class="proj-body">
@@ -176,7 +177,7 @@
             <div class="stat"><div class="v g">0</div><div class="k">site visits; everything delivered remotely</div></div>
           </div>
           <div class="tags"><span class="tag">robot_localization</span><span class="tag">navsat_transform</span><span class="tag">twist_mux</span><span class="tag">HIL simulator</span><span class="tag">Field-log replay</span><span class="tag">Python</span><span class="tag">GNSS reference authored</span></div>
-          <p class="note">Both figures are computed from the actual field logs (relative coordinates only). Client under NDA, described at a general level, names withheld.</p>
+          <p class="note">The two plots are computed from the actual field logs (relative coordinates only); the diagram is a system overview. Client under NDA, described at a general level, names withheld.</p>
         </div>
       </article>
 
@@ -508,7 +509,7 @@
         <h4>AES block cipher in Java &amp; 8086 assembly</h4><p>Led a team of three implementing the Advanced Encryption Standard: a complete Java implementation (SubBytes, ShiftRows, MixColumns, round keys) and an 8086 assembly port in emu8086 carrying the S-box, round-constant and Galois-field tables and the round structure.</p>
       </div>
       <div class="card mini reveal" style="--i:7">
-        <figure class="mini-media fit"><a class="zoom" href="assets/media/mini_code_attendance.png" data-cap="Attendance Management System, Attendance.java controller · source excerpt"><img src="assets/media/mini_code_attendance.png" alt="Source excerpt from the attendance controller" loading="lazy" style="object-position:0 0"></a><span class="badge-src">source excerpt</span></figure>
+        <figure class="mini-media"><a class="zoom" href="assets/media/mini_attendance.jpg" data-cap="Attendance Management System, the Courses tab: batches, sessions per course, instructor assignment and export to .xlsx"><img src="assets/media/mini_attendance.jpg" alt="Attendance management system, Courses tab: course creation, batch setup, a sessions table with dates and times, and an export to .xlsx button" loading="lazy"></a><span class="zoom-hint">click to enlarge</span></figure>
         <h4>Attendance management system</h4><p>Scalable attendance system for training centres and academic institutions: a JavaFX front end over a MySQL database: courses, batches, sessions and per-session attendance.</p>
       </div>
     </div>
