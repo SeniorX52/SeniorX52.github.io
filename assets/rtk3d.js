@@ -20,6 +20,7 @@ if (host) {
   io.observe(host);
 
   async function start() {
+    host.querySelectorAll('a.zoom').forEach(z => z.remove());
     const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, powerPreference: 'high-performance' });
     renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
     renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = 1.1;
