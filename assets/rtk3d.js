@@ -78,8 +78,16 @@ if (host) {
       const b = new THREE.Box3().setFromObject(g); return { g, y0: y, ry0: ry, nadir: new THREE.Vector3(x, b.min.y + .1, z) };
     });
 
-    const rings = WPS.map(() => el('polygon', 'ring')), wpTags = WPS.map((_, i) => { const d = document.createElement('div'); d.className = 'wp'; d.textContent = 'WP' + (i + 1); L.appendChild(d); return d; });
-    const route = el('polyline', 'route'); const fixes = Array.from({ length: 90 }, () => el('circle', 'fix'));
+    const wpTags = WPS.map((_, i) => { const d = document.createElement('div'); d.className = 'wp'; d.textContent = 'WP' + (i + 1); L.appendChild(d); return d; });
+    const MINT = 0x3ee6b0, NT = 90;
+    const routeLine = new THREE.Line(new THREE.BufferGeometry().setFromPoints([...WPS, WPS[0]].map(w => new THREE.Vector3(w[0], .015, w[1]))), new THREE.LineDashedMaterial({ color: 0x9aa3b5, dashSize: .18, gapSize: .14, transparent: true, opacity: .65 }));
+    routeLine.computeLineDistances(); scene.add(routeLine);
+    for (const w of WPS) { const ring = new THREE.Mesh(new THREE.RingGeometry(.29, .34, 48), new THREE.MeshBasicMaterial({ color: MINT, transparent: true, opacity: .9, side: THREE.DoubleSide, depthWrite: false })); ring.rotation.x = -Math.PI / 2; ring.position.set(w[0], .014, w[1]); scene.add(ring); const fill = new THREE.Mesh(new THREE.CircleGeometry(.29, 48), new THREE.MeshBasicMaterial({ color: MINT, transparent: true, opacity: .14, side: THREE.DoubleSide, depthWrite: false })); fill.rotation.x = -Math.PI / 2; fill.position.set(w[0], .013, w[1]); scene.add(fill); }
+    const disc = (() => { const c = document.createElement('canvas'); c.width = c.height = 64; const g = c.getContext('2d'); const r = g.createRadialGradient(32, 32, 0, 32, 32, 32); r.addColorStop(0, 'rgba(255,255,255,1)'); r.addColorStop(.72, 'rgba(255,255,255,1)'); r.addColorStop(1, 'rgba(255,255,255,0)'); g.fillStyle = r; g.fillRect(0, 0, 64, 64); const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; return t; })();
+    const trailPos = new Float32Array(NT * 3), trailCol = new Float32Array(NT * 3); const trailGeo = new THREE.BufferGeometry();
+    trailGeo.setAttribute('position', new THREE.BufferAttribute(trailPos, 3)); trailGeo.setAttribute('color', new THREE.BufferAttribute(trailCol, 3)); trailGeo.setDrawRange(0, 0);
+    scene.add(new THREE.Points(trailGeo, new THREE.PointsMaterial({ size: .1, map: disc, vertexColors: true, transparent: true, alphaTest: .3, depthWrite: false })));
+    const mintC = new THREE.Color(MINT), darkC = new THREE.Color(0x11322a);
     const sigs = sats.flatMap(() => [el('line', 'sig'), el('line', 'sig')]); const corr = el('path', 'corr');
     const labSat = lab('amber'), labCorr = lab('mint'), labBase = lab('mint'), labRover = lab('indigo'), legend = lab('legend');
     labSat.textContent = 'GNSS satellites'; labCorr.innerHTML = 'RTK corrections<small>base → rover</small>'; labBase.innerHTML = 'RTK base station<small>fixed reference point</small>';
@@ -103,7 +111,7 @@ if (host) {
       if (s >= len) { s = 0; seg = (seg + 1) % 4; yawFrom = yaw; yawTo = headingOf(seg); turning = TURN; }
       const a = WPS[seg]; pos[0] = a[0] + d[0] * s / len; pos[1] = a[1] + d[1] * s / len;
       for (const w of wheels) w.rotation.y += SPEED * dt / R;
-      trailAcc += SPEED * dt; if (trailAcc >= .13) { trailAcc = 0; trail.push([pos[0], pos[1]]); if (trail.length > fixes.length) trail.shift(); }
+      trailAcc += SPEED * dt; if (trailAcc >= .13) { trailAcc = 0; trail.push([pos[0], pos[1]]); if (trail.length > NT) trail.shift(); }
     };
     if (reduce) { s = 2.6; const d = segVec(1); pos[0] = WPS[1][0] + d[0] * s / 5.3; pos[1] = WPS[1][1] + d[1] * s / 5.3; seg = 1; yaw = headingOf(1); for (let k = 0; k < 40; k++) trail.push([WPS[1][0] + d[0] * (s - k * .13) / 5.3, WPS[1][1]]); }
 
@@ -111,9 +119,8 @@ if (host) {
       rover.position.set(pos[0], 0, pos[1]); rover.rotation.y = yaw; rover.updateMatrixWorld(true);
       sats.forEach((o, i) => { if (!reduce) { o.g.position.y = o.y0 + .08 * Math.sin(t * .5 + i * 2); o.g.rotation.y = o.ry0 + .07 * Math.sin(t * .27 + i); } });
       const aA = top(antA), aB = top(antB), aBase = top(baseAnt);
-      const routePts = [...WPS, WPS[0]].map(w => P(w[0], .01, w[1])); route.setAttribute('points', pts(routePts));
-      WPS.forEach((w, i) => { const ring = []; for (let k = 0; k < 24; k++) ring.push(P(w[0] + .34 * Math.cos(k / 24 * 2 * Math.PI), .01, w[1] + .34 * Math.sin(k / 24 * 2 * Math.PI))); rings[i].setAttribute('points', pts(ring)); const q = P(w[0] + .55, .01, w[1] - .5); put(wpTags[i], q[0], q[1]); });
-      fixes.forEach((c, i) => { const f = trail[trail.length - 1 - i]; if (!f) { c.setAttribute('r', 0); return; } const q = P(f[0], .01, f[1]); c.setAttribute('cx', q[0].toFixed(1)); c.setAttribute('cy', q[1].toFixed(1)); c.setAttribute('r', 2.6); c.setAttribute('opacity', (1 - i / fixes.length * .85).toFixed(2)); });
+      WPS.forEach((w, i) => { const q = P(w[0] + .55, .01, w[1] - .5); put(wpTags[i], q[0], q[1]); });
+      const n = trail.length; for (let i = 0; i < n; i++) { const f = trail[n - 1 - i]; trailPos[i * 3] = f[0]; trailPos[i * 3 + 1] = .03; trailPos[i * 3 + 2] = f[1]; const k = 1 - i / NT * .9; trailCol[i * 3] = mintC.r * k + darkC.r * (1 - k); trailCol[i * 3 + 1] = mintC.g * k + darkC.g * (1 - k); trailCol[i * 3 + 2] = mintC.b * k + darkC.b * (1 - k); } trailGeo.attributes.position.needsUpdate = true; trailGeo.attributes.color.needsUpdate = true; trailGeo.setDrawRange(0, n);
       sats.forEach((o, i) => { const n = P(o.nadir.x, o.nadir.y, o.nadir.z); [aBase, aA].forEach((tip, j) => { const l = sigs[i * 2 + j]; l.setAttribute('x1', n[0].toFixed(1)); l.setAttribute('y1', n[1].toFixed(1)); l.setAttribute('x2', tip[0].toFixed(1)); l.setAttribute('y2', tip[1].toFixed(1)); }); });
       const cx = (aBase[0] + aB[0]) / 2, cy = Math.min(aBase[1], aB[1]) - 150;
       corr.setAttribute('d', `M${aBase[0].toFixed(1)},${(aBase[1] - 6).toFixed(1)} Q${cx.toFixed(1)},${cy.toFixed(1)} ${(aB[0] + 6).toFixed(1)},${(aB[1] - 4).toFixed(1)}`);
