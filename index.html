@@ -49,9 +49,9 @@
     <div class="hero-grid">
       <div>
         <div class="eyebrow reveal" style="--i:0"><span class="pulse"></span> Available remote · Cairo, UTC+2 · 20–25 h/wk now, full time from mid-2027</div>
-        <h1 class="display reveal" style="--i:1">I make robots know <em>where they are</em> and <em>what's coming.</em></h1>
+        <h1 class="display reveal" style="--i:1"><span class="t1">Robotics engineer.</span><span class="t2">Perception, localization and control <em>on real hardware.</em></span></h1>
         <p class="lede reveal" style="--i:2">
-          Robotics &amp; embedded systems engineer. <strong>ROS 2, computer vision and sensor fusion</strong>, deployed
+          <strong>ROS 2, computer vision and sensor fusion</strong>, deployed
           on the hardware that actually flies and drives: Jetson, STM32, Raspberry Pi. Bachelor's thesis graded
           <strong>1.0 (A)</strong> at the University of Stuttgart's Institute of Flight Mechanics and Controls.
           Delivering GNSS/RTK localization, photogrammetry pipelines and vision systems <strong>as a remote contractor</strong>.
@@ -85,14 +85,14 @@
   <div class="wrap">
     <div class="bento">
       <div class="card reveal span-4" style="--i:0">
-        <div class="tagline">Track record</div>
+        <div class="tagline">Track record</div><div class="blogo"><img src="assets/logos/upwork_wordmark.svg" alt="Upwork"></div>
         <div><div class="num"><span data-count="25" data-suffix="+">0</span></div>
         <div class="lbl"><b>projects shipped</b> across robotics, perception and embedded systems, from flight controllers to photogrammetry pipelines.</div></div>
       </div>
       <div class="card reveal span-4" style="--i:1">
-        <div class="tagline">Egypt · Germany</div>
-        <div><div class="num"><span data-count="5">0</span></div>
-        <div class="lbl"><b>organisations worked or studied at</b>: GUC, GIU Berlin, University of Stuttgart, Valeo, Lucas-Nülle.</div></div>
+        <div class="tagline">Egypt · Germany</div><div class="blogo row"><img src="assets/logos/valeo.svg" alt="Valeo"><img src="assets/logos/lucasnuelle.svg" alt="Lucas-Nülle"><img src="assets/logos/mrs_dark.png" alt="MRS Multi-Robot Systems Lab"></div>
+        <div><div class="num"><span data-count="3">0</span></div>
+        <div class="lbl"><b>companies and labs worked at</b>: Valeo, Lucas-Nülle and the Multi-Robot Systems Lab, in Cairo and Germany.</div></div>
       </div>
       <div class="card reveal span-4" style="--i:2">
         <div class="tagline">Client reviews · Upwork</div>
@@ -100,12 +100,12 @@
         <div class="lbl"><b>five-star client reviews, every contract rated 5.0</b>: ROS 2, EKF fusion, embedded firmware, 3D tooling. <a href="#reviews" style="color:var(--c2)">Read them ↓</a></div></div>
       </div>
       <div class="card reveal span-4" style="--i:3">
-        <div class="tagline">University of Stuttgart</div>
+        <div class="tagline">University of Stuttgart</div><div class="blogo"><img class="inv tall" src="assets/logos/unistuttgart.svg" alt="University of Stuttgart"></div>
         <div><div class="num"><span data-count="1.0" data-suffix=" (A)">0</span></div>
         <div class="lbl"><b>thesis grade</b> at the Institute of Flight Mechanics and Controls, the highest grade on the German scale.</div></div>
       </div>
       <div class="card reveal span-4" style="--i:4">
-        <div class="tagline">German University in Cairo</div>
+        <div class="tagline">German University in Cairo</div><div class="blogo"><img src="assets/logos/guc_dark.png" alt="German University in Cairo"></div>
         <div><div class="num"><span data-count="3" data-prefix="#">0</span></div>
         <div class="lbl"><b>rank in Mechatronics by cumulative GPA</b>, 0.93 (≈ 4.0). GUC scholarship awarded on that ranking; DAAD scholarship for a semester in Berlin.</div></div>
       </div>
@@ -123,7 +123,7 @@
     <div class="sec-head reveal">
       <div class="kicker">Selected work</div>
       <h2>Eleven projects, <em>measured</em> not described.</h2>
-      <p>Every number and every figure comes from the project's own repository, logs or outputs. Client work under NDA is described at a general level, without names.</p>
+      <p>Numbers and figures come from each project's own repository, logs or outputs.</p>
     </div>
 
     <div class="projects">
@@ -159,7 +159,7 @@
       <article class="card proj flip reveal">
         <div class="proj-media">
           <div class="grid-2">
-            <div class="cell wide" style="--ar:1.6"><img src="assets/media/rtk_mission.svg" alt="System diagram of the RTK localization mission: GNSS satellites, an RTK base station streaming corrections, and the dual-antenna rover following waypoints" loading="lazy"><span class="caption">how the delivered localization chain fits together · system diagram, not data</span></div>
+            <div class="cell wide" style="--ar:1.6"><img src="assets/media/rtk_mission.svg" alt="System diagram of the RTK localization mission: GNSS satellites, an RTK base station streaming corrections, and the dual-antenna rover following waypoints" loading="lazy"><span class="caption">how the localization chain fits together · system diagram</span></div>
             <div class="cell wide" style="--ar:2.2"><img src="assets/media/rtk_precision.png" alt="RTK positioning quality measured from the field logs: centimetre-level scatter of fixes at rest, and a logged run's RTK ground track at 10 Hz" loading="lazy"><span class="caption">from the field logs · fixes at rest, a 10 Hz run</span></div>
             <div class="cell wide" style="--ar:2.145"><img src="assets/media/rtk_validation.png" alt="Replay of the field logs scoring the drivetrain mapping against the RTK course rate: the integrated mapping agrees with RTK in all three windows" loading="lazy"><span class="caption">replay validation · 3 / 3 windows agree with RTK</span></div>
           </div>
@@ -177,7 +177,7 @@
             <div class="stat"><div class="v g">0</div><div class="k">site visits; everything delivered remotely</div></div>
           </div>
           <div class="tags"><span class="tag">robot_localization</span><span class="tag">navsat_transform</span><span class="tag">twist_mux</span><span class="tag">HIL simulator</span><span class="tag">Field-log replay</span><span class="tag">Python</span><span class="tag">GNSS reference authored</span></div>
-          <p class="note">The two plots are computed from the actual field logs (relative coordinates only); the diagram is a system overview. Client under NDA, described at a general level, names withheld.</p>
+          <p class="note">Client project under NDA. Plots computed from the field logs, relative coordinates only.</p>
         </div>
       </article>
 
@@ -193,14 +193,14 @@
           <h3>15-state EKF for smartphone GNSS + IMU fusion</h3>
           <div class="sub">C++ core with Python and C bindings · batch and online modes · cars and motorcycles</div>
           <p>A sensor-fusion library that turns a phone's raw GNSS fixes and IMU stream into vehicle kinematics at IMU rate: velocity, tangential acceleration, heading, pitch, roll (lean angle for motorcycles), yaw rate and corrected position. What makes it work in practice is the <strong>automatic calibration of the phone's arbitrary mounting orientation into the vehicle frame</strong>, estimated from an ordinary driving session through gravity and velocity alignment rather than a rig. A later engagement on the same system removed the slope effect from the acceleration estimate, which the client describes in the reviews below. Runs on recorded files or on a live stream.</p>
-          <p>Validated on a committed session: the fused velocity tracks speed derived from consecutive GPS fixes with <strong>r = 0.95</strong>, and heading converges within five seconds to a <strong>median error of 0.4° (RMSE 1.3°)</strong> against GPS course over ground, using the fixes as reference because the phone's own speed field is a placeholder with corrupt spikes.</p>
+          <p>On a recorded driving session, the fused velocity tracks speed derived from consecutive GPS fixes with <strong>r = 0.95</strong>, and heading converges within five seconds to a <strong>median error of 0.4° (RMSE 1.3°)</strong> against GPS course over ground, using the fixes as reference because the phone's own speed field is a placeholder with corrupt spikes.</p>
           <div class="stat-row">
             <div class="stat"><div class="v g">r = 0.95</div><div class="k">EKF velocity vs GPS-derived speed · RMSE 1.19 m/s</div></div>
             <div class="stat"><div class="v g">0.4°</div><div class="k">median heading error after convergence · RMSE 1.3°</div></div>
             <div class="stat"><div class="v g">234 Hz</div><div class="k">fused output from 1 Hz GPS + IMU</div></div>
           </div>
           <div class="tags"><span class="tag">GNSS</span><span class="tag">IMU</span><span class="tag">Mount auto-calibration</span><span class="tag">Eigen</span><span class="tag">Python &amp; C bindings</span></div>
-          <p class="note">Figures computed from the repository's own input and EKF output files.</p>
+          <p class="note">Figures from the repository's own input and output files.</p>
         </div>
       </article>
 
@@ -219,7 +219,7 @@
             <div class="stat"><div class="v g">5 m/s</div><div class="k">wind disturbance tolerated</div></div>
           </div>
           <div class="tags"><span class="tag">Multi-robot</span><span class="tag">PX4</span><span class="tag">Geofencing</span><span class="tag">C++</span></div>
-          <p class="note">Client under NDA: stack listed, architecture withheld.</p>
+          <p class="note">Client project under NDA.</p>
         </div>
       </article>
 
@@ -266,7 +266,7 @@
               <div class="tags"><span class="tag">GLB / USDZ</span><span class="tag">Draco</span><span class="tag">ChArUco</span><span class="tag">Blender</span><span class="tag">three.js</span><span class="tag">Python</span></div>
             </div>
           </div>
-          <p class="note">Panel 2 is sampled on the reconstructed surface in your browser (200,000 points coloured from the texture, or by elevation) because the dense multi-view-stereo cloud isn't committed to the repository. Panel 3 is the pipeline's real GLB. Input photos are Epic's public RealityScan sample set.</p>
+          <p class="note">Panel 2 samples 200,000 points on the reconstructed surface in your browser, coloured from the texture or by elevation; panel 3 is the pipeline's GLB. Input photos: Epic's public RealityScan sample set.</p>
         </div>
       </article>
 
@@ -409,7 +409,7 @@
     <div class="sec-head reveal">
       <div class="kicker">Client reviews</div>
       <h2>Twelve contracts, <em>twelve five-star reviews.</em> <span class="stars3d big" role="img" aria-label="5.0 out of 5 stars"><i class="st" style="--k:0"><i class="s3"><b class="f"></b><b class="b"></b></i></i><i class="st" style="--k:1"><i class="s3"><b class="f"></b><b class="b"></b></i></i><i class="st" style="--k:2"><i class="s3"><b class="f"></b><b class="b"></b></i></i><i class="st" style="--k:3"><i class="s3"><b class="f"></b><b class="b"></b></i></i><i class="st" style="--k:4"><i class="s3"><b class="f"></b><b class="b"></b></i></i></span></h2>
-      <p>Every review below is a screenshot from my Upwork profile, unedited.</p>
+      <p>Screenshots from my Upwork profile.</p>
     </div>
     <div class="reviews" id="reviewgrid">
       <article class="card rv reveal" style="--i:0">
@@ -521,7 +521,7 @@
     <div class="sec-head reveal">
       <div class="kicker">Skills &amp; tools</div>
       <h2>What I build with, <em>by layer.</em></h2>
-      <p>Every entry here appears in at least one project above or on the CV.</p>
+      <p>By layer, from simulation down to the silicon.</p>
     </div>
     <div class="toolgroups tiles" id="toolgroups">
       <div class="toolgroup reveal" style="--i:0"><h4>Robotics &amp; simulation</h4><div class="tools">

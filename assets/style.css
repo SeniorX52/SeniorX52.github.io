@@ -627,9 +627,6 @@ a.cred-doc, .cred a.thumb { cursor: zoom-in; }
   .contact-links .btn { flex: 1 1 auto; justify-content: center; }
   .marquee-track { animation-duration: 30s; }
 }
-@media (max-width: 420px) {
-  h1.display { font-size: 40px; }
-}
 @media (hover: none) {
   .spotlight { display: none; }
 }
@@ -649,3 +646,16 @@ a.cred-doc, .cred a.thumb { cursor: zoom-in; }
 
 @media (hover: none) { .panel .hint { display: none; } }
 
+
+h1.display { font-size: clamp(38px, 5.4vw, 76px); max-width: none; }
+h1.display .t1 { display: block; }
+h1.display .t2 { display: block; font-size: clamp(20px, 2.3vw, 33px); font-weight: 500; letter-spacing: -.02em; line-height: 1.2; margin-top: .45em; color: var(--tx-2); }
+h1.display .t2 em { padding-right: .1em; }
+.blogo { position: absolute; top: 22px; right: 24px; display: flex; align-items: center; gap: 16px; }
+.blogo img { height: 28px; width: auto; max-width: 140px; object-fit: contain; object-position: right center; display: block; opacity: .92; }
+.blogo img.inv { filter: brightness(0) invert(1); }
+.blogo.row img { height: 22px; max-width: 80px; }
+@media (max-width: 1000px) { .blogo img { max-width: 110px; } }
+@media (max-width: 640px) { .blogo { top: 18px; right: 18px; gap: 12px; } .blogo img { height: 22px; max-width: 90px; } .blogo.row img { height: 18px; max-width: 64px; } }
+.blogo img.tall { height: 60px; max-width: 150px; }
+@media (max-width: 640px) { .blogo img.tall { height: 48px; } }
