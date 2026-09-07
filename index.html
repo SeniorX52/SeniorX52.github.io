@@ -159,9 +159,8 @@
       <article class="card proj flip reveal">
         <div class="proj-media">
           <div class="grid-2">
-            <div class="cell wide" style="--ar:1.6"><img src="assets/media/rtk_mission.svg" alt="System diagram of the RTK localization mission: GNSS satellites, an RTK base station streaming corrections, and the dual-antenna rover following waypoints" loading="lazy"><span class="caption">how the localization chain fits together · system diagram</span></div>
+            <div class="cell wide" style="--ar:1.6"><img src="assets/media/rtk_mission.webp" alt="RTK localization on the rover: GNSS satellites, an RTK base station on a tripod sending corrections, and the dual-antenna rover driving a waypoint route" loading="lazy"><span class="caption">RTK localization on the rover · click to enlarge</span></div>
             <div class="cell wide" style="--ar:2.2"><img src="assets/media/rtk_precision.png" alt="RTK positioning quality measured from the field logs: centimetre-level scatter of fixes at rest, and a logged run's RTK ground track at 10 Hz" loading="lazy"><span class="caption">from the field logs · fixes at rest, a 10 Hz run</span></div>
-            <div class="cell wide" style="--ar:2.145"><img src="assets/media/rtk_validation.png" alt="Replay of the field logs scoring the drivetrain mapping against the RTK course rate: the integrated mapping agrees with RTK in all three windows" loading="lazy"><span class="caption">replay validation · 3 / 3 windows agree with RTK</span></div>
           </div>
         </div>
         <div class="proj-body">
@@ -177,7 +176,7 @@
             <div class="stat"><div class="v g">0</div><div class="k">site visits; everything delivered remotely</div></div>
           </div>
           <div class="tags"><span class="tag">robot_localization</span><span class="tag">navsat_transform</span><span class="tag">twist_mux</span><span class="tag">HIL simulator</span><span class="tag">Field-log replay</span><span class="tag">Python</span><span class="tag">GNSS reference authored</span></div>
-          <p class="note">Client project under NDA. Plots computed from the field logs, relative coordinates only.</p>
+          <p class="note">Client project under NDA. Plot computed from the field logs, relative coordinates only. Illustration rendered from public 3D models: NASA (satellite), Clearpath Robotics (Husky), HELIOS++ (tripod).</p>
         </div>
       </article>
 
@@ -296,7 +295,7 @@
           </div>
         </div>
         <div class="proj-body">
-          <div class="proj-top"><span class="chip mint">ROS 2 Jazzy</span><span class="chip">Nav2</span><span class="chip">slam_toolbox</span><span class="chip">Simulation</span></div>
+          <div class="proj-top"><span class="chip grad">Client contract</span><span class="chip">ROS 2 Jazzy</span><span class="chip">Nav2</span><span class="chip">slam_toolbox</span><span class="chip">Simulation</span></div>
           <h3>UV-C disinfection robot: autonomy stack in simulation</h3>
           <div class="sub">Gazebo Harmonic · differential drive · human-safety interlocks · 262 passing tests</div>
           <p>The autonomy software for an indoor UV-C disinfection robot, built and validated in simulation: the robot maps a room with <strong>slam_toolbox</strong>, plans an optimised route between disinfection waypoints with <strong>Nav2</strong>, holds the lamps on for configurable dwell times, and shuts them down immediately on human detection, because the payload is genuinely dangerous. My work was the simulation and software stack (mapping, navigation, route optimisation, lamp control and safety), with the hardware deployment path documented.</p>
@@ -368,7 +367,7 @@
           </div>
         </div>
         <div class="proj-body">
-          <div class="proj-top"><span class="chip mint">Firmware</span><span class="chip">ESP32-S3</span><span class="chip">ESP-IDF</span><span class="chip">LVGL</span></div>
+          <div class="proj-top"><span class="chip grad">Client contract</span><span class="chip">Firmware</span><span class="chip">ESP32-S3</span><span class="chip">ESP-IDF</span><span class="chip">LVGL</span></div>
           <h3>Zmanim alarm clock: full firmware for an ESP32-S3 touch display</h3>
           <div class="sub">Off-the-shelf ESP32-S3 3.5" touch board · every line of software mine: drivers, UI, alarm engine, solar-time engine, simulator</div>
           <p>Firmware for an alarm clock that understands <strong>zmanim, the halachic times derived from sunrise and sunset</strong>. A NOAA solar calculator and a bundled world-city database (coordinates, elevation, time zone) compute the day's times on-device, so an alarm can be set as <em>"10 minutes before Shma"</em> and it moves with the calendar; alarms carry day-of-week filters and offsets, with a test suite covering offset maths, 12/24-hour conversion, time-zone handling and edge cases.</p>
