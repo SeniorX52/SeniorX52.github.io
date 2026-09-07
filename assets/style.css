@@ -685,3 +685,8 @@ h1.display .t2 em { padding-right: .1em; }
 @media (prefers-reduced-motion: reduce) { .rtkviz .ov .sig, .rtkviz .ov .corr { animation: none; } }
 .pipe-body .cell { position: relative; border-radius: 12px; overflow: hidden; background: #0f121a; aspect-ratio: var(--ar, 16 / 10); margin-bottom: 14px; }
 .pipe-body .cell img { width: 100%; height: 100%; object-fit: contain; display: block; }
+.rtkviz .ctl { position: absolute; top: 10px; right: 10px; z-index: 4; display: flex; gap: 2px; padding: 2px; border-radius: 999px; background: rgba(8,10,16,.72); border: 1px solid rgba(255,255,255,.1); backdrop-filter: blur(8px); }
+.rtkviz .ctl button { font-family: var(--mono); font-size: 10px; letter-spacing: .04em; padding: 4px 9px; border-radius: 999px; border: 0; background: transparent; color: rgba(255,255,255,.7); cursor: pointer; }
+.rtkviz .ctl button:hover { background: rgba(255,255,255,.14); color: #fff; }
+.rtkviz:fullscreen { border-radius: 0; background: #0a0c12; }
+.rtkviz canvas.gl:focus { outline: none; }

@@ -31,8 +31,17 @@ if (host) {
     scene.environment = new THREE.PMREMGenerator(renderer).fromScene(new RoomEnvironment(), .04).texture;
     const camera = new THREE.PerspectiveCamera(32, 1.6, .1, 200); camera.position.set(1.9, 2.6, 7.6);
     const controls = new OrbitControls(camera, renderer.domElement);
-    controls.target.set(.3, 1.3, -1); controls.enableDamping = true; controls.dampingFactor = .06; controls.enablePan = false; controls.enableZoom = false;
-    controls.minPolarAngle = .95; controls.maxPolarAngle = 1.42; controls.minAzimuthAngle = -.75; controls.maxAzimuthAngle = .75; controls.update();
+    controls.target.set(.3, 1.3, -1); controls.enableDamping = true; controls.dampingFactor = .07; controls.screenSpacePanning = false; controls.zoomSpeed = .8; controls.panSpeed = .8;
+    controls.minDistance = 1.2; controls.maxDistance = 34; controls.minPolarAngle = .1; controls.maxPolarAngle = 1.52; controls.update();
+    controls.mouseButtons = { LEFT: THREE.MOUSE.ROTATE, MIDDLE: THREE.MOUSE.DOLLY, RIGHT: THREE.MOUSE.PAN };
+    controls.touches = { ONE: THREE.TOUCH.ROTATE, TWO: THREE.TOUCH.DOLLY_PAN };
+    renderer.domElement.tabIndex = 0; controls.listenToKeyEvents(renderer.domElement);
+    const home = { p: camera.position.clone(), t: controls.target.clone() };
+    const ctl = document.createElement('div'); ctl.className = 'ctl'; host.appendChild(ctl);
+    const btn = (label, fn) => { const b = document.createElement('button'); b.type = 'button'; b.textContent = label; b.addEventListener('click', fn); ctl.appendChild(b); return b; };
+    btn('reset view', () => { camera.position.copy(home.p); controls.target.copy(home.t); controls.update(); });
+    if (document.fullscreenEnabled) { const fb = btn('fullscreen', () => document.fullscreenElement === host ? document.exitFullscreen() : host.requestFullscreen()); document.addEventListener('fullscreenchange', () => { fb.textContent = document.fullscreenElement === host ? 'exit fullscreen' : 'fullscreen'; }); }
+    const cap = host.querySelector('.caption'); if (cap) cap.textContent = matchMedia('(hover: none)').matches ? 'RTK localization on the rover · drag to orbit · pinch to zoom' : 'RTK localization on the rover · drag to orbit · scroll to zoom · right-drag to pan';
 
     const sun = new THREE.DirectionalLight(0xfff2dc, 2.4); sun.position.set(5, 9, 4); sun.castShadow = true;
     sun.shadow.mapSize.set(1024, 1024); Object.assign(sun.shadow.camera, { left: -9, right: 9, top: 9, bottom: -9, far: 40 }); sun.shadow.bias = -.0005; sun.shadow.radius = 4;
