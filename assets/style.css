@@ -261,7 +261,7 @@ section { padding: 120px 0; }
 .proj.full .proj-media { min-height: 0; }
 .pipe { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px; padding: 6px; width: 100%; }
 .panel { position: relative; aspect-ratio: 1 / 1; border-radius: 12px; overflow: hidden; background: #0f121a; }
-.panel > img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.panel > img { width: 100%; height: 100%; object-fit: contain; display: block; }
 .panel model-viewer { width: 100%; height: 100%; background: transparent; --poster-color: transparent; --progress-bar-color: var(--c2); --progress-mask: transparent; }
 .panel.viewer { cursor: grab; }
 .panel.viewer:active { cursor: grabbing; }
@@ -646,3 +646,5 @@ a.cred-doc, .cred a.thumb { cursor: zoom-in; }
   .nav-cta { padding: 8px 12px; font-size: 13px; }
   #cloud { opacity: .4; }
 }
+
+@media (hover: none) { .panel .hint { display: none; } }

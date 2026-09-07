@@ -56,7 +56,7 @@ if (host) {
     const areas = meshes.map(areaOf), total = areas.reduce((x, y) => x + y, 0) || 1;
 
     const pos = new Float32Array(N * 3), colTex = new Float32Array(N * 3), colEle = new Float32Array(N * 3);
-    const p = new THREE.Vector3(), nrm = new THREE.Vector3(), uv = new THREE.Vector2();
+    const p = new THREE.Vector3(), nrm = new THREE.Vector3(), uv = new THREE.Vector2(), upright = new THREE.Vector3(0, 0, 1);
     let k = 0;
     meshes.forEach((m, mi) => {
       const count = mi === meshes.length - 1 ? N - k : Math.round(N * areas[mi] / total);
@@ -66,7 +66,7 @@ if (host) {
       const base = (mats[0] && mats[0].color) || new THREE.Color(1, 1, 1);
       for (let i = 0; i < count && k < N; i++, k++) {
         sampler.sample(p, nrm, null, uv);
-        p.applyMatrix4(m.matrixWorld);
+        p.applyMatrix4(m.matrixWorld).applyAxisAngle(upright, -Math.PI / 2);
         pos[k * 3] = p.x; pos[k * 3 + 1] = p.y; pos[k * 3 + 2] = p.z;
         if (tex) {
           const x = Math.min(tex.w - 1, Math.max(0, (uv.x % 1 + 1) % 1 * tex.w | 0));
@@ -94,7 +94,7 @@ if (host) {
     const grid = new THREE.GridHelper(1.6, 16, 0x3a4661, 0x232b3a); grid.position.y = -.5 * ext.y / maxDim - .02;
     grid.material.transparent = true; grid.material.opacity = .45; scene.add(grid);
 
-    camera.position.set(.95, .55, 1.05); controls.target.set(0, 0, 0); controls.update();
+    camera.position.set(1.3, .76, 1.43); controls.target.set(0, 0, 0); controls.update();
 
     host.querySelectorAll('[data-mode]').forEach(btn => btn.addEventListener('click', () => {
       host.querySelectorAll('[data-mode]').forEach(b => b.classList.toggle('on', b === btn));
@@ -109,5 +109,5 @@ if (host) {
     renderer.render(scene, camera);
     host.classList.add('ready');
   }, (xhr) => { if (xhr.total) status.textContent = `loading ${Math.round(xhr.loaded / xhr.total * 100)}%`; },
-  (err) => { status.textContent = 'could not load model — serve over http (see serve.js)'; console.error(err); });
+  (err) => { status.textContent = 'could not load the model'; console.error(err); });
 }
